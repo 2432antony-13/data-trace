@@ -11,7 +11,7 @@
 // 验证：构建后用 node:vm 执行 static-data.js，将客户端筛选结果与真实服务端
 // 响应逐组对比断言（法规 8 组、更新 5 组组合）。
 
-import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -30,10 +30,38 @@ mkdirSync(outDir, { recursive: true });
 const tempDir = mkdtempSync(join(tmpdir(), 'dt-demo-build-'));
 // DEMO_DATABASE_PATH：可注入已含新抓取/审校数据的库（每日自动更新工作流使用）。
 const demoDatabasePath = process.env.DEMO_DATABASE_PATH || join(tempDir, 'demo.sqlite');
-const { server } = createDataTraceServer({
+const { server, db } = createDataTraceServer({
   databasePath: demoDatabasePath,
   env: { MANAGE_LINK_SECRET: 'demo-build', PUBLIC_BASE_URL: PAGES_URL, CONFIRMATION_DRY_RUN: '1' }
 });
+
+// 数据连续性：把上次构建导出的 published 更新快照合并回演示库。
+// 本地重建（未注入 DEMO_DATABASE_PATH）时历史抓取数据不丢失。
+const snapshotPath = join(outDir, 'demo-updates.json');
+if (existsSync(snapshotPath)) {
+  const snapshot = JSON.parse(readFileSync(snapshotPath, 'utf8'));
+  const insertUpdate = db.prepare(`INSERT OR IGNORE INTO updates (
+    id, external_id, regulation_id, jurisdiction, event_type, title, summary, event_date,
+    importance, industries, topics, summary_zh, source_url, source_name, source_checked_at,
+    content_hash, previous_version_external_id, status, created_at, updated_at
+  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+  let merged = 0;
+  for (const item of snapshot) {
+    if (item.status !== 'published') continue;
+    const industries = Array.isArray(item.industries) ? item.industries : [];
+    const topics = Array.isArray(item.topics) ? item.topics : [];
+    insertUpdate.run(
+      item.id, item.externalId, item.regulationId ?? null, item.jurisdiction, item.eventType,
+      item.title, item.summary, item.eventDate, item.importance, JSON.stringify(industries),
+      JSON.stringify(topics), item.summaryZh || '', item.sourceUrl, item.sourceName,
+      item.sourceCheckedAt || new Date().toISOString(), item.contentHash || 'snapshot',
+      item.previousVersionExternalId ?? null, 'published', item.createdAt || new Date().toISOString(),
+      item.updatedAt || new Date().toISOString()
+    );
+    merged += 1;
+  }
+  if (merged > 0) console.log('[demo-build] 已从快照合并 ' + merged + ' 条历史更新');
+}
 await new Promise((resolvePromise) => server.listen(0, '127.0.0.1', resolvePromise));
 const base = 'http://127.0.0.1:' + server.address().port;
 const getJson = async (path) => (await fetch(base + path)).json();
@@ -56,7 +84,7 @@ for (const item of regulations.data) {
 assert.ok(regulations.data.length >= 22, '法规快照应至少含 22 条种子记录');
 assert.ok(updates.data.length >= 16, '更新快照应至少含 16 条种子事件');
 assert.equal(Object.keys(details).length, regulations.data.length);
-console.log('[demo-build] 快照完成：法规 22、更新 16、详情 22');
+console.log('[demo-build] 快照完成：法规 ' + regulations.data.length + '、更新 ' + updates.data.length + '、详情 ' + Object.keys(details).length);
 
 // ---------- static-data.js ----------
 const staticJs = `// 静态演示数据与 fetch 拦截器（由 scripts/build-static-demo.mjs 生成，勿手改）
@@ -225,6 +253,24 @@ for (const file of ['app.js', 'static-data.js']) {
   assert.equal(check.status, 0, file + ' 语法错误：' + check.stderr);
 }
 
+// ---------- 导出 published 更新快照（数据连续性的关键，与每日工作流配合） ----------
+const publishedRows = db.prepare("SELECT * FROM updates WHERE status='published' ORDER BY event_date DESC").all();
+const snapshotOut = publishedRows.map((row) => {
+  const parse = (value) => { try { return JSON.parse(value || '[]'); } catch { return []; } };
+  return {
+    id: row.id, externalId: row.external_id, regulationId: row.regulation_id, jurisdiction: row.jurisdiction,
+    eventType: row.event_type, title: row.title, summary: row.summary, eventDate: row.event_date,
+    importance: row.importance, industries: parse(row.industries), topics: parse(row.topics),
+    summaryZh: row.summary_zh, sourceUrl: row.source_url, sourceName: row.source_name,
+    sourceCheckedAt: row.source_checked_at, contentHash: row.content_hash,
+    previousVersionExternalId: row.previous_version_external_id, status: row.status,
+    createdAt: row.created_at, updatedAt: row.updated_at
+  };
+});
+writeFileSync(snapshotPath, JSON.stringify(snapshotOut, null, 1));
+assert.ok(snapshotOut.length >= 16, '快照应至少含 16 条种子事件');
+console.log('[demo-build] 已导出快照 site/demo-updates.json（published 共 ' + snapshotOut.length + ' 条）');
+
 await new Promise((resolvePromise) => server.close(resolvePromise));
 rmSync(tempDir, { recursive: true, force: true });
-console.log('[demo-build] 完成 → site/（index.html / app.js / styles.css / static-data.js / 404.html）');
+console.log('[demo-build] 完成 → site/（index.html / app.js / styles.css / static-data.js / 404.html / demo-updates.json）');
