@@ -81,9 +81,16 @@ with sync_playwright() as playwright:
     expect(page.locator("#subscription-feedback")).to_contain_text("持久保存")
     expect(page.locator("#manage-actions")).to_be_visible()
     page.locator("#daily-briefing").uncheck()
-    page.locator('[name="jurisdiction-plan"][value="SG"]').check()
+    # 法域多选（对接 /api/jurisdictions）：默认全选；取消 HK 后仅保留 SG。
+    page.locator('[data-jurisdiction-choice="HK"]').click()
+    expect(page.locator('[data-jurisdiction-choice="HK"]')).to_have_attribute("aria-pressed", "false")
+    expect(page.locator('[data-jurisdiction-choice="SG"]')).to_have_attribute("aria-pressed", "true")
     page.locator("#subscription-form button[type=submit]").click()
     expect(page.locator("#subscription-feedback")).to_contain_text("持久保存")
+    # 「全选」切换恢复全选，验证多选切换。
+    page.locator('[data-jurisdiction-all="1"]').click()
+    expect(page.locator('[data-jurisdiction-choice="HK"]')).to_have_attribute("aria-pressed", "true")
+    expect(page.locator('[data-jurisdiction-choice="SG"]')).to_have_attribute("aria-pressed", "true")
     page.screenshot(path=artifacts / "05-subscription-zh.png", full_page=True)
     page.locator("#unsubscribe-button").click()
     expect(page.locator("#subscription-feedback")).to_contain_text("订阅已取消")
@@ -96,5 +103,5 @@ with sync_playwright() as playwright:
     page.screenshot(path=artifacts / "06-mobile-navigation.png", full_page=True)
 
     assert not console_errors, f"Browser console errors: {console_errors}"
-    print("UI_OK i18n=en-default+zh-toggle home=22/26 latest=pdpr-2026 library_sg=12 finance_sg=3 search=4 details=pdpr+hkma+hkid timeline_sg=8 timeline_hk=8 plans=fixed subscription=create-update-cancel mobile_nav=ok")
+    print("UI_OK i18n=en-default+zh-toggle home=22/26 latest=pdpr-2026 library_sg=12 finance_sg=3 search=4 details=pdpr+hkma+hkid timeline_sg=8 timeline_hk=8 jurisdictions=multi-select subscription=create-update-cancel mobile_nav=ok")
     browser.close()

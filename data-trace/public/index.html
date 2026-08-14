@@ -3,28 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DataTrace — authoritative Hong Kong and Singapore data compliance intelligence">
   <title>DataTrace · Global Data Compliance Intelligence</title>
+  <meta name="description" content="DataTrace — authoritative Hong Kong and Singapore data compliance intelligence: live regulatory signals, structured obligations, amendment timelines and verified primary sources.">
+  <link rel="canonical" href="https://datatrace.example/">
+  <meta property="og:title" content="DataTrace · Global Data Compliance Intelligence">
+  <meta property="og:description" content="Authoritative Hong Kong and Singapore data compliance intelligence — trace every regulatory shift to its source.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://datatrace.example/">
+  <meta property="og:locale" content="en_US">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main" data-i18n="skip.link">Skip to main content</a>
+  <div id="global-banner" class="global-banner" role="status" hidden></div>
   <div class="noise" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="#home" aria-label="DataTrace home">
+    <a class="brand" href="/" aria-label="DataTrace home">
       <span class="brand-mark">DT</span>
       <span>DATA TRACE<small>GLOBAL COMPLIANCE SIGNAL</small></span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#home" data-nav="home" data-i18n="nav.home">Radar</a>
-      <a href="#library" data-nav="library" data-i18n="nav.library">Library</a>
-      <a href="#timeline" data-nav="timeline" data-i18n="nav.timeline">Timeline</a>
-      <a class="nav-cta" href="#subscribe" data-nav="subscribe" data-i18n="nav.subscribe">Subscribe ↗</a>
+      <a href="/" data-nav="home" data-i18n="nav.home">Radar</a>
+      <a href="/library" data-nav="library" data-i18n="nav.library">Library</a>
+      <a href="/timeline" data-nav="timeline" data-i18n="nav.timeline">Timeline</a>
+      <a class="nav-cta" href="/subscribe" data-nav="subscribe" data-i18n="nav.subscribe">Subscribe ↗</a>
     </nav>
     <button id="language-toggle" class="language-toggle" type="button" aria-label="切换到中文">中文</button>
     <button class="menu-button" aria-label="Open navigation" aria-expanded="false">MENU</button>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section id="home" class="view active" data-view="home">
       <div class="hero">
         <div class="hero-copy reveal">
@@ -32,11 +40,11 @@
           <h1 data-i18n="hero.title">Trace every<br><em>regulatory shift</em><br>to its source.</h1>
           <p data-i18n="hero.body">Regulatory intelligence for cross-border legal and privacy teams—connecting primary sources, obligations, amendments and delivery in one auditable data chain.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#library"><span data-i18n="hero.library">Explore the library</span> <span>→</span></a>
-            <a class="button ghost" href="#timeline" data-i18n="hero.timeline">Review latest changes</a>
+            <a class="button primary" href="/library"><span data-i18n="hero.library">Explore the library</span> <span>→</span></a>
+            <a class="button ghost" href="/timeline" data-i18n="hero.timeline">Review latest changes</a>
           </div>
         </div>
-        <div class="radar-card reveal delay-1" aria-label="覆盖情况">
+        <div class="radar-card reveal delay-1" data-i18n-aria="radar.label">
           <div class="radar-head"><span>REGULATORY RADAR</span><span class="live">LIVE</span></div>
           <div class="radar-visual">
             <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
@@ -60,7 +68,7 @@
         <section class="latest-panel reveal">
           <div class="section-heading">
             <div><span class="section-index">01</span><h2 data-i18n="latest.title">Latest regulatory signals</h2></div>
-            <a href="#timeline" data-i18n="latest.all">Full timeline →</a>
+            <a href="/timeline" data-i18n="latest.all">Full timeline →</a>
           </div>
           <div id="latest-updates" class="signal-list skeleton-wrap" aria-live="polite"></div>
         </section>
@@ -88,7 +96,7 @@
       <div class="filter-bar">
         <label class="search-box"><span>⌕</span><input id="reg-search" type="search" placeholder="Search rules, duties or authorities" data-i18n-placeholder="library.search" autocomplete="off"></label>
         <div class="filter-group" aria-label="Jurisdiction filter">
-          <button class="chip active" data-jurisdiction="" data-i18n="filter.all">All</button><button class="chip" data-jurisdiction="HK">Hong Kong</button><button class="chip" data-jurisdiction="SG">Singapore</button>
+          <button class="chip active" data-jurisdiction="" data-i18n="filter.all">All</button><span id="library-jurisdiction-chips" class="jurisdiction-chips"></span>
         </div>
         <select id="industry-filter" aria-label="Industry filter"><option value="" data-i18n="filter.allIndustries">All industries</option></select>
         <select id="topic-filter" aria-label="Topic filter"><option value="" data-i18n="filter.allTopics">All topics</option></select>
@@ -104,7 +112,7 @@
       <header class="page-header timeline-header">
         <div><span class="eyebrow">AMENDMENT / COMMENCEMENT / GUIDANCE</span><h1 data-i18n="timeline.title">Regulatory change timeline</h1></div>
         <div class="filter-group" aria-label="Timeline jurisdiction filter">
-          <button class="chip active" data-timeline-jurisdiction="" data-i18n="filter.all">All</button><button class="chip" data-timeline-jurisdiction="HK">Hong Kong</button><button class="chip" data-timeline-jurisdiction="SG">Singapore</button>
+          <button class="chip active" data-timeline-jurisdiction="" data-i18n="filter.all">All</button><span id="timeline-jurisdiction-chips" class="jurisdiction-chips"></span>
         </div>
       </header>
       <div class="timeline-layout">
@@ -129,16 +137,15 @@
         </div>
         <form id="subscription-form" class="subscription-card" novalidate>
           <div class="form-head"><span data-i18n="subscribe.settings">Subscription settings</span><span class="step-label">01 / 02 / 03</span></div>
+          <div id="pending-confirmation" class="pending-confirmation" role="status" hidden></div>
           <label class="field"><span data-i18n="subscribe.email">Work email</span><input id="email" type="email" placeholder="name@company.com" required></label>
           <fieldset><legend data-i18n="subscribe.delivery">Delivery</legend>
             <label class="option"><input id="daily-briefing" type="checkbox" checked><span class="fake-check">✓</span><span><b data-i18n="subscribe.daily">Daily briefing</b><small data-i18n="subscribe.dailyNote">Every day at 08:00 Beijing time</small></span></label>
             <label class="option"><input id="update-alert" type="checkbox" checked><span class="fake-check">✓</span><span><b data-i18n="subscribe.alert">Regulatory update alert</b><small data-i18n="subscribe.alertNote">Immediate delivery for new or amended rules</small></span></label>
           </fieldset>
-          <fieldset><legend data-i18n="subscribe.plan">Jurisdiction plan</legend><div class="jurisdiction-options plan-options">
-            <label><input type="radio" name="jurisdiction-plan" value="HK"><span data-i18n="plan.hk">Hong Kong only</span></label>
-            <label><input type="radio" name="jurisdiction-plan" value="SG"><span data-i18n="plan.sg">Singapore only</span></label>
-            <label><input type="radio" name="jurisdiction-plan" value="ALL" checked><span data-i18n="plan.all">All jurisdictions</span></label>
-          </div></fieldset>
+          <fieldset><legend data-i18n="subscribe.plan">Jurisdictions</legend>
+            <div id="subscription-jurisdiction-choices" class="jurisdiction-choices"></div>
+          </fieldset>
           <button class="button primary submit-button" type="submit"><span data-i18n="subscribe.save">Save subscription</span> <span>→</span></button>
           <p class="fine-print" data-i18n="subscribe.fine">Each email contains recipient-specific management and unsubscribe links. No marketing mail.</p>
           <div id="subscription-feedback" class="feedback" role="status"></div>
@@ -153,7 +160,7 @@
   <footer>
     <div class="brand"><span class="brand-mark">DT</span><span>DATA TRACE<small>TRACE CHANGE. PROVE SOURCE.</small></span></div>
     <p data-i18n="footer.note">Hong Kong + Singapore pilot · source check 2026-08-09<br>Tracking information only; not legal advice.</p>
-    <a href="#home">BACK TO TOP ↑</a>
+    <a href="/">BACK TO TOP ↑</a>
   </footer>
 
   <div id="detail-overlay" class="detail-overlay" hidden>

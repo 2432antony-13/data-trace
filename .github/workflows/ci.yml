@@ -1,0 +1,21 @@
+# DataTrace 持续集成：push 与 PR 均触发
+name: CI
+
+on:
+  push:
+  pull_request:
+
+defaults:
+  run:
+    working-directory: data-trace
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # 项目零第三方依赖，无需 npm ci；check 做语法检查，test 跑 node --test。
+      - run: npm run check && npm test

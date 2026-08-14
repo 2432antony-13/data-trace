@@ -1,0 +1,42 @@
+# DataTrace 部署编排（Docker Compose + Caddy）
+# 使用前请在 data-trace/.env 中设置 DOMAIN（必填）及应用环境变量，参考 .env.example。
+# 启动：docker compose up -d --build
+services:
+  app:
+    build: .
+    # 可选项：从 data-trace/.env 注入应用环境变量（PORT/PUBLIC_BASE_URL/MANAGE_LINK_SECRET/
+    # DISPATCH_API_KEY/MAIL_LOG_API_KEY）。若尚未创建 .env，请删除下面两行，否则会报「找不到文件」。
+    env_file:
+      - .env
+    volumes:
+      - app-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>r.ok?r.json():Promise.reject(new Error('health check failed'))).then(j=>{if(j.status!=='ok')process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      # Caddyfile 中 {$DOMAIN} 占位符由该环境变量注入；下面的插值强制在 .env 中设置 DOMAIN。
+      DOMAIN: "${DOMAIN:?请在 .env 中设置 DOMAIN}"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  app-data:
+  # Caddy 的 /data、/config 用于持久化 ACME TLS 证书与配置，避免重启后重复签发。
+  caddy-data:
+  caddy-config:

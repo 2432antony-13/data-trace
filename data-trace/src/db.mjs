@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
 import { articles, deprecatedSeedRecords, regulations, updates } from './seed-data.mjs';
+import { runJurisdictionMigration } from './migrations/003-jurisdiction-refactor.mjs';
 
 const moduleDir = dirname(fileURLToPath(import.meta.url));
 const checkedAt = '2026-08-09T00:00:00.000Z';
@@ -102,6 +103,8 @@ function migrateDatabase(db) {
       throw error;
     }
   }
+  // 法域拓展：自动执行 jurisdictions 表驱动的 CHECK 移除迁移（幂等，无旧 CHECK 时跳过）。
+  runJurisdictionMigration(db);
 }
 
 export function seedDatabase(db) {

@@ -122,3 +122,33 @@ footer { min-height: 180px; padding: 52px clamp(22px, 6.3vw, 96px); display: gri
   .topbar { height: 70px; }.topbar nav { position: absolute; left: 0; right: 0; top: 70px; display: none; flex-direction: column; align-items: stretch; padding: 20px; background: var(--paper); border-bottom: 1px solid var(--ink); }.topbar nav.open { display: flex; }.language-toggle { margin-left: auto; margin-right: 10px; }.menu-button { display: block; }.hero { padding-top: 56px; min-height: auto; }.hero h1 { font-size: 56px; }.radar-card { min-height: 410px; box-shadow: 10px 10px 0 var(--acid); }.signal-item { grid-template-columns: 78px 54px 1fr; }.signal-item > i { display: none; }.latest-panel, .coverage-panel { padding: 55px 22px; }.section-heading a { display: none; }.regulation-grid { grid-template-columns: 1fr; }.page-header { padding-top: 54px; }.timeline-layout { padding-top: 50px; }.timeline-item { grid-template-columns: 70px 1fr; gap: 16px; }.timeline-item::before { left: 76px; }.detail-facts { grid-template-columns: 1fr; }.subscribe-layout { padding-block: 60px; }.subscription-card { padding: 24px; box-shadow: 9px 9px 0 var(--acid); }.jurisdiction-options.plan-options { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
+
+/* ---- 无障碍：focus-visible ---- */
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+.detail-drawer :focus-visible { outline-color: var(--white); }
+main:focus { outline: none; }
+
+/* ---- 跳过链接 ---- */
+.skip-link { position: absolute; left: 14px; top: -64px; z-index: 100; background: var(--ink); color: var(--acid); padding: 12px 18px; font-weight: 750; font-size: 13px; border-radius: 2px; transition: top .2s ease; }
+.skip-link:focus { top: 14px; }
+
+/* ---- 全局离线横幅 ---- */
+.global-banner { background: #a83224; color: var(--white); padding: 12px clamp(22px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; font-weight: 650; line-height: 1.5; }
+.global-banner[hidden] { display: none; }
+.global-banner .banner-retry { border: 1px solid var(--white); background: transparent; color: var(--white); padding: 8px 16px; font: 750 11px "SFMono-Regular", monospace; cursor: pointer; border-radius: 2px; flex: 0 0 auto; }
+
+/* ---- 数据区块错误态 + 重试 ---- */
+.error-state { grid-column: 1 / -1; padding: 28px 22px; text-align: center; border: 1px dashed var(--orange); background: rgba(185, 104, 63, .06); }
+.error-state p { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.retry-button { border: 1px solid var(--ink); background: var(--ink); color: var(--white); padding: 10px 22px; font: 750 11px "SFMono-Regular", monospace; cursor: pointer; border-radius: 2px; }
+.retry-button:hover { box-shadow: 4px 4px 0 var(--orange); transform: translate(-2px, -2px); }
+
+/* ---- 订阅双重确认提示 ---- */
+.pending-confirmation { background: var(--acid); color: var(--ink); padding: 14px 16px; margin: 20px 0 0; font-size: 12px; font-weight: 700; line-height: 1.6; border: 1px solid var(--ink); }
+.pending-confirmation[hidden] { display: none; }
+
+/* ---- 法域多选 chip（筛选与订阅共用） ---- */
+.jurisdiction-chips { display: contents; }
+.jurisdiction-choices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.jurisdiction-choices .chip { font-size: 11px; padding: 10px 14px; }
+.jurisdiction-choices .chip[aria-pressed="true"] { background: var(--acid); }

@@ -12,6 +12,12 @@ async function request(baseUrl, path, options) {
   return { response, body };
 }
 
+async function requestText(baseUrl, path) {
+  const response = await fetch(`${baseUrl}${path}`);
+  const body = await response.text();
+  return { response, body };
+}
+
 test('authoritative seed facts and relationships match the reviewed official-source snapshot', () => {
   assert.equal(regulations.length, 22);
   assert.equal(articles.length, 26);
@@ -82,7 +88,8 @@ test('full regulation-to-subscription flow persists and remains manageable', asy
     databasePath: join(tempDir, 'test.sqlite'),
     env: {
       MAIL_LOG_API_KEY: 'test-mail-key', DISPATCH_API_KEY: 'test-dispatch-key',
-      MANAGE_LINK_SECRET: 'test-manage-secret', PUBLIC_BASE_URL: 'https://data-trace.example'
+      MANAGE_LINK_SECRET: 'test-manage-secret', PUBLIC_BASE_URL: 'https://data-trace.example',
+      CONFIRMATION_DRY_RUN: '1'
     }
   });
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
@@ -100,6 +107,15 @@ test('full regulation-to-subscription flow persists and remains manageable', asy
   assert.equal(health.body.articles, 26);
   assert.equal(health.body.updates, 16);
   assert.deepEqual(health.body.schedule, { cron: '0 8 * * *', timezone: 'Asia/Shanghai', label: '08:00 Beijing time' });
+
+  // 法域接口：HK/SG 激活 + 路线图（MO 等 inactive）。
+  const jurisdictionsApi = await request(baseUrl, '/api/jurisdictions');
+  assert.equal(jurisdictionsApi.response.status, 200);
+  const jurisdictionCodes = jurisdictionsApi.body.data.map((item) => item.code);
+  assert.ok(jurisdictionCodes.includes('HK') && jurisdictionCodes.includes('SG') && jurisdictionCodes.includes('MO'));
+  assert.equal(jurisdictionsApi.body.data.find((item) => item.code === 'HK').active, 1);
+  assert.equal(jurisdictionsApi.body.data.find((item) => item.code === 'MO').active, 0);
+  assert.equal(jurisdictionsApi.body.data.find((item) => item.code === 'MO').name_zh, '澳门');
 
   const hongKong = await request(baseUrl, '/api/regulations?jurisdiction=HK');
   assert.equal(hongKong.response.status, 200);
@@ -149,7 +165,27 @@ test('full regulation-to-subscription flow persists and remains manageable', asy
   assert.equal(created.body.data.email, 'counsel@example.com');
   assert.ok(created.body.manageToken);
   assert.equal(created.body.data.jurisdictionPlan, 'ALL');
+  // 双重确认：新建时 pendingConfirmation 为 true，且 DRY_RUN 下顶层返回 confirmationUrl。
+  assert.equal(created.body.data.pendingConfirmation, true);
+  assert.equal(created.body.data.confirmedAt, null);
+  assert.ok(created.body.confirmationUrl);
   const { id } = created.body.data;
+
+  // 访问确认链接（相对路径）→ 200 且返回确认成功 HTML。
+  const confirmationUrl = new URL(created.body.confirmationUrl);
+  const confirmed = await requestText(baseUrl, `${confirmationUrl.pathname}${confirmationUrl.search}`);
+  assert.equal(confirmed.response.status, 200);
+  assert.match(confirmed.response.headers.get('content-type'), /text\/html/);
+  assert.match(confirmed.body, /确认成功/);
+
+  // 确认后 pendingConfirmation 变为 false，DB confirmed_at 非空。
+  const afterConfirm = await request(baseUrl, `/api/subscribers/${id}`, {
+    headers: { 'x-manage-token': created.body.manageToken }
+  });
+  assert.equal(afterConfirm.response.status, 200);
+  assert.equal(afterConfirm.body.data.pendingConfirmation, false);
+  assert.ok(afterConfirm.body.data.confirmedAt);
+  assert.ok(db.prepare('SELECT confirmed_at FROM subscribers WHERE id=?').get(id).confirmed_at);
 
   const managed = await request(baseUrl, `/api/subscribers/${id}`, {
     method: 'PATCH', headers: { 'content-type': 'application/json', 'x-manage-token': created.body.manageToken },
@@ -159,6 +195,27 @@ test('full regulation-to-subscription flow persists and remains manageable', asy
   assert.equal(managed.body.data.dailyBriefing, true);
   assert.equal(managed.body.data.jurisdictionPlan, 'SG');
   assert.deepEqual(managed.body.data.jurisdictions, ['SG']);
+  // PATCH 只更新偏好，不重置 confirmed_at。
+  assert.ok(db.prepare('SELECT confirmed_at FROM subscribers WHERE id=?').get(id).confirmed_at);
+
+  // 未知法域 code 必须被拒绝（PATCH 不受订阅限流影响）。
+  const unknownJurisdiction = await request(baseUrl, `/api/subscribers/${id}`, {
+    method: 'PATCH', headers: { 'content-type': 'application/json', 'x-manage-token': created.body.manageToken },
+    body: JSON.stringify({ dailyBriefing: true, updateAlert: true, jurisdictions: ['XX'] })
+  });
+  assert.equal(unknownJurisdiction.response.status, 422);
+  assert.match(unknownJurisdiction.body.error, /Unknown jurisdiction/);
+
+  // 第二个未确认订阅者：使用 jurisdictions 多选数组（覆盖 HK+SG → 派生计划 ALL），不应进入 dispatch。
+  const unconfirmed = await request(baseUrl, '/api/subscribers', {
+    method: 'POST', headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ email: 'pending@example.com', dailyBriefing: true, updateAlert: true, jurisdictions: ['HK', 'SG'] })
+  });
+  assert.equal(unconfirmed.response.status, 201);
+  assert.equal(unconfirmed.body.data.pendingConfirmation, true);
+  assert.ok(unconfirmed.body.confirmationUrl);
+  assert.equal(unconfirmed.body.data.jurisdictionPlan, 'ALL');
+  assert.deepEqual(unconfirmed.body.data.jurisdictions, ['HK', 'SG']);
 
   const briefing = await request(baseUrl, '/api/briefings/preview?jurisdiction=SG');
   assert.equal(briefing.response.status, 200);
@@ -181,10 +238,17 @@ test('full regulation-to-subscription flow persists and remains manageable', asy
   assert.equal(dispatch.body.data.deliveryMode, 'scheduled_08_beijing');
   assert.equal(dispatch.body.data.messages.length, 1);
   assert.equal(dispatch.body.data.messages[0].gateway.to, 'counsel@example.com');
+  // 未确认订阅者不进入 dispatch。
+  assert.ok(!dispatch.body.data.messages.some((m) => m.gateway.to === 'pending@example.com'));
   assert.match(dispatch.body.data.messages[0].gateway.content.text, /中文一句话摘要（AI）/);
   assert.match(dispatch.body.data.messages[0].gateway.metadata.subject, /2026-08-09/);
   assert.match(dispatch.body.data.messages[0].manageUrl, new RegExp(`/\\#subscribe\\?subscriber=${id}`));
   assert.match(dispatch.body.data.messages[0].unsubscribeUrl, /action=unsubscribe/);
+  // dispatch 后 dispatch_messages 表 queued 行数等于 messages.length。
+  assert.equal(
+    db.prepare("SELECT COUNT(*) AS count FROM dispatch_messages WHERE status='queued'").get().count,
+    dispatch.body.data.messages.length
+  );
 
   const duplicateDispatch = await request(baseUrl, '/api/dispatch/messages', {
     method: 'POST', headers: { 'content-type': 'application/json', 'x-dispatch-key': 'test-dispatch-key' },
@@ -254,4 +318,32 @@ test('seed import is idempotent and keeps stable record counts', () => {
   assert.equal(second.db.prepare("SELECT COUNT(*) AS count FROM updates WHERE external_id='hk:event:hkma-tmg1:2024-11-05'").get().count, 0);
   second.db.close();
   rmSync(tempDir, { recursive: true, force: true });
+});
+
+test('subscriber rate limit throttles bursts from a single IP', async (t) => {
+  const tempDir = mkdtempSync(join(tmpdir(), 'data-trace-rate-'));
+  const { server } = createDataTraceServer({
+    databasePath: join(tempDir, 'test.sqlite'),
+    env: { MANAGE_LINK_SECRET: 'test-manage-secret', CONFIRMATION_DRY_RUN: '1' }
+  });
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  const { port } = server.address();
+  const baseUrl = `http://127.0.0.1:${port}`;
+  t.after(async () => {
+    await new Promise((resolve) => server.close(resolve));
+    rmSync(tempDir, { recursive: true, force: true });
+  });
+
+  const postSubscriber = () => request(baseUrl, '/api/subscribers', {
+    method: 'POST', headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ email: `rate-${Math.random().toString(36).slice(2)}@example.com`, dailyBriefing: true, jurisdictionPlan: 'ALL' })
+  });
+
+  for (let i = 0; i < 3; i++) {
+    const result = await postSubscriber();
+    assert.equal(result.response.status, 201);
+  }
+  const limited = await postSubscriber();
+  assert.equal(limited.response.status, 429);
+  assert.equal(limited.body.error, 'Too many requests. Try again later.');
 });

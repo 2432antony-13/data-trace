@@ -1,0 +1,41 @@
+# DataTrace 裸机 systemd 服务单元
+# 安装：
+#   sudo cp datatrace.service /etc/systemd/system/datatrace.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now datatrace
+# 前提：代码位于 /opt/datatrace，环境变量文件位于 /etc/datatrace.env（参考 datatrace.env.example）。
+[Unit]
+Description=DataTrace compliance tracker (Node.js)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=datatrace
+Group=datatrace
+WorkingDirectory=/opt/datatrace
+ExecStart=/usr/bin/node src/server.mjs
+EnvironmentFile=/etc/datatrace.env
+Restart=always
+RestartSec=3
+
+# —— 安全硬化 ——
+NoNewPrivileges=yes
+ProtectSystem=strict
+# 数据目录：应用默认把 SQLite 写到 <WorkingDirectory>/data/data-trace.sqlite，即 /opt/datatrace/data。
+# 为使数据目录与 ReadWritePaths 一致（/var/lib/datatrace），首次部署请建立符号链接：
+#   sudo mkdir -p /var/lib/datatrace
+#   sudo chown datatrace:datatrace /var/lib/datatrace
+#   sudo rmdir /opt/datatrace/data 2>/dev/null || true
+#   sudo ln -s /var/lib/datatrace /opt/datatrace/data
+ReadWritePaths=/var/lib/datatrace
+PrivateTmp=yes
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

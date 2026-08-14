@@ -1,0 +1,13 @@
+# DataTrace 反向代理（Caddy 2）
+# {$DOMAIN} 由环境变量 DOMAIN 注入（docker-compose 中通过强制插值要求设置 DOMAIN）。
+# 端口 80/443 已由 compose 映射；Caddy 会自动为域名签发/续期 HTTPS 证书。
+{$DOMAIN} {
+	encode gzip zstd
+	reverse_proxy app:3000
+
+	# 安全响应头（应用层另有 cache-control / content-type 等；此处为双层防御之一）
+	header X-Content-Type-Options nosniff
+	header X-Frame-Options DENY
+	header Referrer-Policy strict-origin-when-cross-origin
+	header -Server
+}

@@ -1,0 +1,40 @@
+# DataTrace 每日简报调度（GitHub Actions）
+# 定时 cron 为 UTC 00:00，即北京时间 08:00；也可手动触发（workflow_dispatch）。
+name: Daily Dispatch
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # UTC 00:00 = 北京时间 08:00
+  workflow_dispatch:
+
+# 防止同一时间重复运行（例如手动触发与定时触发重叠）
+concurrency:
+  group: daily-dispatch
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger daily briefing dispatch
+        run: |
+          SCHEDULED_AT="$(date -u +%Y-%m-%dT00:00:00Z)"
+          BODY="$(printf '{"messageType":"daily_briefing","scheduledAt":"%s"}' "${SCHEDULED_AT}")"
+          RESP_FILE="$(mktemp)"
+          HTTP_CODE="$(curl -sS -o "${RESP_FILE}" -w '%{http_code}' \
+            -X POST "${{ secrets.DISPATCH_URL }}/api/dispatch/messages" \
+            -H 'content-type: application/json' \
+            -H "x-dispatch-key: ${{ secrets.DISPATCH_API_KEY }}" \
+            -d "${BODY}")"
+          RESPONSE="$(cat "${RESP_FILE}")"
+          echo "HTTP ${HTTP_CODE}: ${RESPONSE}"
+          if [[ "${HTTP_CODE}" =~ ^2 ]]; then
+            echo "dispatch ok"
+            exit 0
+          fi
+          if printf '%s' "${RESPONSE}" | grep -qE '"alreadyPrepared"[[:space:]]*:[[:space:]]*true'; then
+            echo "dispatch already prepared (idempotent)"
+            exit 0
+          fi
+          echo "dispatch failed"
+          exit 1
