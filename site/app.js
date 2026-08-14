@@ -339,7 +339,7 @@ function libraryQueryFromState() {
 function syncLibraryUrl() {
   if (viewForPath(location.pathname) !== 'library') return; // 仅在法规库视图同步 URL，避免残留计时器改错路径
   const query = libraryQueryFromState();
-  const url = '/library' + (query ? '?' + query : '');
+  const url = BASE_PATH + '/library' + (query ? '?' + query : '');
   currentViewUrl = url;
   history.replaceState(null, '', url);
   syncMeta();

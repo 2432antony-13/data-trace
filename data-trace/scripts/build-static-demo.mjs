@@ -99,10 +99,7 @@ window.__DT_STATIC__ = {
   var map = Object.assign({}, S.details, {
     '/api/health': S.health,
     '/api/taxonomy': S.taxonomy,
-    '/api/jurisdictions': S.jurisdictions,
-    '/api/briefings/preview': S.previews[''],
-    '/api/briefings/preview?jurisdiction=HK': S.previews.HK,
-    '/api/briefings/preview?jurisdiction=SG': S.previews.SG
+    '/api/jurisdictions': S.jurisdictions
   });
   var realFetch = window.fetch.bind(window);
   function okJson(value) {
@@ -120,16 +117,16 @@ window.__DT_STATIC__ = {
     var raw = typeof input === 'string' ? input : (input && input.url) || '';
     var url;
     try { url = new URL(raw, location.origin); } catch (error) { return realFetch(input, init); }
-    var key = url.pathname + url.search;
+    var pathname = url.pathname;
     var method = (init && init.method) || 'GET';
     if (method !== 'GET') return blocked();
-    if (key === '/api/regulations') return okJson(S.filterRegulations(queryParams(url)));
-    if (key === '/api/updates') return okJson(S.filterUpdates(queryParams(url)));
-    if (key.indexOf('/api/briefings/preview') === 0) {
+    if (pathname === '/api/regulations') return okJson(S.filterRegulations(queryParams(url)));
+    if (pathname === '/api/updates') return okJson(S.filterUpdates(queryParams(url)));
+    if (pathname.indexOf('/api/briefings/preview') === 0) {
       var j = queryParams(url).jurisdiction;
       return okJson(S.previews[j] || S.previews['']);
     }
-    if (Object.prototype.hasOwnProperty.call(map, key)) return okJson(map[key]);
+    if (Object.prototype.hasOwnProperty.call(map, pathname)) return okJson(map[pathname]);
     return realFetch(input, init);
   };
 })();
@@ -184,6 +181,7 @@ const patches = [
     "function viewForPath(path) {\n  if (path === BASE_PATH + '/library') return 'library';\n  if (path === BASE_PATH + '/timeline') return 'timeline';\n  if (path === BASE_PATH + '/subscribe') return 'subscribe';\n  return 'home';\n}"],
   ["let currentViewUrl = '/';", "let currentViewUrl = BASE_PATH + '/';"],
   ["navigateTo('/library?jurisdiction=' + encodeURIComponent(button.dataset.jurisdictionJump)", "navigateTo(BASE_PATH + '/library?jurisdiction=' + encodeURIComponent(button.dataset.jurisdictionJump)"],
+  ["const url = '/library' + (query ? '?' + query : '');", "const url = BASE_PATH + '/library' + (query ? '?' + query : '');"],
   ["(currentViewUrl || '/')", "(currentViewUrl || BASE_PATH + '/')"],
   ["ctx.previousUrl || '/'", "ctx.previousUrl || BASE_PATH + '/'"]
 ];
@@ -201,16 +199,24 @@ html = html.replace('<link rel="stylesheet" href="/styles.css">', '<link rel="st
 html = html.replace('<script type="module" src="/app.js"></script>', '<script src="static-data.js"></script>\n  <script type="module" src="app.js"></script>');
 html = html.split('href="/').join('href="' + BASE_PATH + '/');   // 内部链接统一子路径前缀
 html = html.split('https://datatrace.example').join(PAGES_URL);  // canonical/og 指向 Pages 地址
+html = html.split(BASE_PATH + '//').join(BASE_PATH + '/');                 // 修正 canonical 尾部双斜杠
 writeFileSync(join(outDir, 'index.html'), html);
 
 // ---------- 404.html：深链刷新回退到 hash，由 parseRoute 恢复 ----------
-const notFound = '<!doctype html><html><head><meta charset="utf-8"><title>DataTrace</title><script>(function(){var b=' + JSON.stringify(BASE_PATH) + ';var p=location.pathname||"";var s=p.indexOf(b)===0?p.slice(b.length).replace(/^\/+/, ""):"";location.replace(b+"/"+(s?"#"+s:"")+(location.search||""));})();</script></head><body>Redirecting…</body></html>\n';
+const notFound = '<!doctype html><html><head><meta charset="utf-8"><title>DataTrace</title><script>(function(){var b=' + JSON.stringify(BASE_PATH) + ';var p=location.pathname||"";var s=p.indexOf(b)===0?p.slice(b.length).replace(/^\\/+/, ""):"";location.replace(b+"/"+(s?"#"+s:"")+(location.search||""));})();</script></head><body>Redirecting…</body></html>\n';
 writeFileSync(join(outDir, '404.html'), notFound);
 
 // ---------- 静态资源 ----------
 copyFileSync(join(dataTraceDir, 'public/styles.css'), join(outDir, 'styles.css'));
 writeFileSync(join(outDir, 'static-data.js'), staticJs);
 writeFileSync(join(outDir, '.nojekyll'), '');
+
+// ---------- 防回归守卫：拦截器必须按 pathname 匹配（带 query 的请求会漏网）；404 正则必须完整 ----------
+assert.ok(!staticJs.includes('url.pathname + url.search'), '拦截器不得按 pathname+search 全量匹配');
+assert.ok(staticJs.includes('var pathname = url.pathname;'), '拦截器缺少 pathname 匹配');
+assert.ok(notFound.includes('/^\\/+/'), '404.html 正则转义缺失');
+assert.ok(!appJs.includes("const url = '/library' +"), 'app.js 存在未加 BASE_PATH 的根路径');
+assert.ok(!appJs.includes("navigateTo('/library?"), 'app.js 存在未加 BASE_PATH 的跳转');
 
 // ---------- 语法校验产物 ----------
 import { spawnSync } from 'node:child_process';
