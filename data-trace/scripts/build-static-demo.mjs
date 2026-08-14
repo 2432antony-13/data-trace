@@ -5,6 +5,9 @@
 // 与后端语义一致；订阅等写操作返回「静态演示版」提示。
 //
 // 产物：<repo>/site/{index.html, app.js, styles.css, static-data.js, 404.html}
+// 部署：pages.yml 直接部署已提交的 site/；修改前端或数据后请本地运行
+//   npm run build:demo 并提交（每日更新工作流 daily-regulatory-update.yml 会
+//   自动完成抓取+重建+提交）。
 // 验证：构建后用 node:vm 执行 static-data.js，将客户端筛选结果与真实服务端
 // 响应逐组对比断言（法规 8 组、更新 5 组组合）。
 

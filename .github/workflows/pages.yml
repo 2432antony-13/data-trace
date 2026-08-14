@@ -1,5 +1,7 @@
 # 部署静态演示站到 GitHub Pages（https://2432antony-13.github.io/data-trace/）
-# 注意：仓库 Settings → Pages → Source 必须选择 "GitHub Actions"。
+# 直接部署仓库中已构建好的 site/：
+#   · daily-regulatory-update.yml 每日重建 site/（含新抓取法规）并提交 → 触发本工作流
+#   · 本地修改前端/数据后：cd data-trace && npm run build:demo 再提交
 name: Deploy static demo to Pages
 
 on:
@@ -19,16 +21,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: data-trace
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build static demo
-        run: node scripts/build-static-demo.mjs
+      - name: Validate built demo
+        run: node --check site/app.js && node --check site/static-data.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
