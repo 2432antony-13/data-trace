@@ -220,6 +220,27 @@ Q5：docker compose 启动报「请在 .env 中设置 DOMAIN」？
 A5：在 data-trace/.env 中填写 DOMAIN 后再启动；DOMAIN 是 Caddy 站点地址，必填。
 
 Q6：裸机部署数据写不进 /opt/datatrace/data？
+## 每日法规更新（生产全栈版）
+
+演示站由 GitHub Actions 每日自动更新（.github/workflows/daily-regulatory-update.yml）。
+自建全栈版建议在服务器 crontab 加两条（北京时间 08:05 抓取、08:30 简报）：
+
+```
+5 8 * * * cd /opt/datatrace && /usr/bin/node src/ingest/run.mjs --source hk,sg >> /var/log/datatrace-ingest.log 2>&1
+30 8 * * * /opt/datatrace/deploy/daily-dispatch.sh >> /var/log/datatrace-dispatch.log 2>&1
+```
+
+抓取结果进入待审校（pending_review），审校后发布：
+
+```
+cd /opt/datatrace
+node src/ingest/review.mjs list        # 查看待审校
+node src/ingest/review.mjs edit <id> --summaryZh=… --importance=high
+node src/ingest/review.mjs approve <id> # 发布；随后手动触发 alert（或由调度器每日简报覆盖）
+```
+
+> 注：SG 三源（PDPC/MAS/IMDA）当前受 WAF/维护页限制，纯 Node 抓取返回 0 条；需接入无头浏览器或官方 API 后生效。
+
 A6：应用已支持 DATABASE_PATH 环境变量，可在 /etc/datatrace.env 直接指定
     DATABASE_PATH=/var/lib/datatrace/data-trace.sqlite；或按第 2.2 节第 3 步把 data 目录
     符号链接到 /var/lib/datatrace。两种方式都需保证 /var/lib/datatrace 属主为 datatrace，

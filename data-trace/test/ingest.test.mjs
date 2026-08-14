@@ -161,6 +161,24 @@ test('review approve/reject 改变 status', async (t) => {
   assert.match(list.output, /待审校记录/);
 });
 
+test('review approve-all 批量发布并改写占位摘要', async (t) => {
+  const db = makeDb(t);
+  await runIngest({ db, fetchFn: makeFetchFn(), sources: ALL_SOURCES });
+  const before = db.prepare("SELECT COUNT(*) AS c FROM updates WHERE status='pending_review'").get().c;
+  assert.ok(before >= 2);
+
+  const result = runReview(db, ['approve-all']);
+  assert.ok(result.ok);
+  assert.match(result.output, /已批量发布/);
+  assert.equal(db.prepare("SELECT COUNT(*) AS c FROM updates WHERE status='pending_review'").get().c, 0);
+  const published = db.prepare("SELECT COUNT(*) AS c FROM updates WHERE status='published' AND summary_zh LIKE '【自动收录】%'").get().c;
+  assert.ok(published >= 2, '占位摘要应改写为【自动收录】前缀');
+  // 幂等：再次执行无待审校记录。
+  const again = runReview(db, ['approve-all']);
+  assert.ok(again.ok);
+  assert.match(again.output, /没有待审校的记录/);
+});
+
 test('summarize 未配置 env 返回 null（不触网）', async () => {
   assert.equal(await summarize({ title: 't', text: 'x', env: {} }), null);
   assert.equal(await summarize({ title: 't', text: 'x', env: { SUMMARIZE_API_URL: 'http://example.invalid' } }), null);

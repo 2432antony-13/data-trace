@@ -12,7 +12,7 @@ DataTrace is an open-source regulatory intelligence platform for cross-border pr
 
 **https://2432antony-13.github.io/data-trace/**
 
-Browse the regulation library, timeline and bilingual UI with real seed data (22 instruments, 26 structured obligations, 16 update events). Subscriptions and email delivery require a full-stack deployment.
+Browse the regulation library, timeline and bilingual UI with real seed data (22 instruments, 26 structured obligations, 16 update events). The demo **refreshes itself daily** — a scheduled GitHub Actions workflow ingests official sources, publishes new events and redeploys the site every day at 10:00 Beijing time. Subscriptions and email delivery require a full-stack deployment.
 
 ## Highlights
 

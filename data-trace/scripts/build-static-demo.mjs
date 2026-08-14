@@ -25,8 +25,10 @@ const PAGES_URL = 'https://2432antony-13.github.io' + BASE_PATH + '/';
 
 mkdirSync(outDir, { recursive: true });
 const tempDir = mkdtempSync(join(tmpdir(), 'dt-demo-build-'));
+// DEMO_DATABASE_PATH：可注入已含新抓取/审校数据的库（每日自动更新工作流使用）。
+const demoDatabasePath = process.env.DEMO_DATABASE_PATH || join(tempDir, 'demo.sqlite');
 const { server } = createDataTraceServer({
-  databasePath: join(tempDir, 'demo.sqlite'),
+  databasePath: demoDatabasePath,
   env: { MANAGE_LINK_SECRET: 'demo-build', PUBLIC_BASE_URL: PAGES_URL, CONFIRMATION_DRY_RUN: '1' }
 });
 await new Promise((resolvePromise) => server.listen(0, '127.0.0.1', resolvePromise));
@@ -48,9 +50,9 @@ const details = {};
 for (const item of regulations.data) {
   details['/api/regulations/' + item.id] = await getJson('/api/regulations/' + encodeURIComponent(item.id));
 }
-assert.equal(regulations.data.length, 22);
-assert.equal(updates.data.length, 16);
-assert.equal(Object.keys(details).length, 22);
+assert.ok(regulations.data.length >= 22, '法规快照应至少含 22 条种子记录');
+assert.ok(updates.data.length >= 16, '更新快照应至少含 16 条种子事件');
+assert.equal(Object.keys(details).length, regulations.data.length);
 console.log('[demo-build] 快照完成：法规 22、更新 16、详情 22');
 
 // ---------- static-data.js ----------

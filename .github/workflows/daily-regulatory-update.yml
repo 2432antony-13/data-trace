@@ -1,0 +1,48 @@
+# 每日法规自动更新（演示站）：定时抓取官方源 → 自动收录 → 重建 site/ → 推送触发 Pages 部署
+# 计划：UTC 02:00 = 北京时间 10:00（官方源一般已发布当日内容）；也可在 Actions 页手动触发。
+name: Daily regulatory update
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-regulatory-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: data-trace
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # ① 抓取官方源（HK 实时可用；SG 三源受 WAF 限制返回 0 条，不影响流程）
+      - name: Ingest official sources
+        run: DATABASE_PATH=$RUNNER_TEMP/datatrace.sqlite node src/ingest/run.mjs --source hk,sg
+      # ② 自动收录（演示模式）：待审校 → published，占位摘要标记【自动收录】
+      - name: Auto-publish pending updates
+        run: DATABASE_PATH=$RUNNER_TEMP/datatrace.sqlite node src/ingest/review.mjs approve-all
+      # ③ 用含新数据的库重建静态演示站
+      - name: Rebuild static demo
+        run: DEMO_DATABASE_PATH=$RUNNER_TEMP/datatrace.sqlite node scripts/build-static-demo.mjs
+      # ④ 有变化才提交；提交会触发 Pages 自动部署
+      - name: Commit and push changes
+        run: |
+          git config user.name 'datatrace-bot'
+          git config user.email 'bot@datatrace.invalid'
+          git add site
+          if git diff --cached --quiet; then
+            echo 'no new regulatory updates today'
+          else
+            git commit -m 'data: daily regulatory update '$(date -u +%Y-%m-%d)
+            git push
+          fi

@@ -50,6 +50,21 @@ export function runReview(db, argv) {
     return { output: ['待审校记录（status=pending_review）：', ...lines].join('\n'), ok: true };
   }
 
+  if (command === 'approve-all') {
+    const rows = db.prepare("SELECT id, title, summary_zh FROM updates WHERE status='pending_review' ORDER BY event_date DESC, id").all();
+    if (rows.length === 0) return { output: '没有待审校的记录。', ok: true };
+    const publish = db.prepare("UPDATE updates SET status='published', summary_zh=?, updated_at=? WHERE id=?");
+    let count = 0;
+    for (const row of rows) {
+      const summaryZh = String(row.summary_zh).startsWith('【待审校】')
+        ? '【自动收录】' + row.title + '（机器采集自官方源，人工精校待补）'
+        : row.summary_zh;
+      publish.run(summaryZh, now, row.id);
+      count += 1;
+    }
+    return { output: `已批量发布 ${count} 条记录（status=pending_review → published；占位摘要已改为【自动收录】）。`, ok: true };
+  }
+
   if (command === 'approve' || command === 'reject') {
     if (!id) return { output: `用法：node src/ingest/review.mjs ${command} <id> [--database <path>]`, ok: false };
     const target = command === 'approve' ? 'published' : 'retracted';
@@ -91,7 +106,7 @@ export function runReview(db, argv) {
   }
 
   return {
-    output: '未知命令。可用：list | approve <id> | reject <id> | edit <id> [--title= --summaryEn= --summaryZh= --importance=high|medium|low]',
+    output: '未知命令。可用：list | approve <id> | approve-all | reject <id> | edit <id> [--title= --summaryEn= --summaryZh= --importance=high|medium|low]',
     ok: false
   };
 }
