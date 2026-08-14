@@ -9,6 +9,7 @@
     "dev": "node --watch src/server.mjs",
     "test": "node --test",
     "check": "node --check src/server.mjs && node --check src/db.mjs && node --check src/seed-data.mjs && node --check public/app.js",
+    "build:demo": "node scripts/build-static-demo.mjs",
     "ingest": "node src/ingest/run.mjs",
     "review": "node src/ingest/review.mjs",
     "migrate:jurisdictions": "node src/migrations/003-jurisdiction-refactor.mjs"

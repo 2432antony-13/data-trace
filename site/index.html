@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataTrace · Global Data Compliance Intelligence</title>
+  <meta name="description" content="DataTrace — authoritative Hong Kong and Singapore data compliance intelligence: live regulatory signals, structured obligations, amendment timelines and verified primary sources.">
+  <link rel="canonical" href="https://2432antony-13.github.io/data-trace//">
+  <meta property="og:title" content="DataTrace · Global Data Compliance Intelligence">
+  <meta property="og:description" content="Authoritative Hong Kong and Singapore data compliance intelligence — trace every regulatory shift to its source.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://2432antony-13.github.io/data-trace//">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip.link">Skip to main content</a>
+  <div id="global-banner" class="global-banner" role="status" hidden></div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/data-trace/" aria-label="DataTrace home">
+      <span class="brand-mark">DT</span>
+      <span>DATA TRACE<small>GLOBAL COMPLIANCE SIGNAL</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/data-trace/" data-nav="home" data-i18n="nav.home">Radar</a>
+      <a href="/data-trace/library" data-nav="library" data-i18n="nav.library">Library</a>
+      <a href="/data-trace/timeline" data-nav="timeline" data-i18n="nav.timeline">Timeline</a>
+      <a class="nav-cta" href="/data-trace/subscribe" data-nav="subscribe" data-i18n="nav.subscribe">Subscribe ↗</a>
+    </nav>
+    <button id="language-toggle" class="language-toggle" type="button" aria-label="切换到中文">中文</button>
+    <button class="menu-button" aria-label="Open navigation" aria-expanded="false">MENU</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="home" class="view active" data-view="home">
+      <div class="hero">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse"></span> LIVE REGULATORY INTELLIGENCE · HK / SG</div>
+          <h1 data-i18n="hero.title">Trace every<br><em>regulatory shift</em><br>to its source.</h1>
+          <p data-i18n="hero.body">Regulatory intelligence for cross-border legal and privacy teams—connecting primary sources, obligations, amendments and delivery in one auditable data chain.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/data-trace/library"><span data-i18n="hero.library">Explore the library</span> <span>→</span></a>
+            <a class="button ghost" href="/data-trace/timeline" data-i18n="hero.timeline">Review latest changes</a>
+          </div>
+        </div>
+        <div class="radar-card reveal delay-1" data-i18n-aria="radar.label">
+          <div class="radar-head"><span>REGULATORY RADAR</span><span class="live">LIVE</span></div>
+          <div class="radar-visual">
+            <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+            <div class="scan"></div>
+            <span class="dot hk"><b>HK</b></span><span class="dot sg"><b>SG</b></span>
+            <span class="radar-center">DT</span>
+          </div>
+          <div class="radar-foot">
+            <span><b id="stat-regulations">—</b> <i data-i18n="stats.records">instruments</i></span>
+            <span><b id="stat-articles">—</b> <i data-i18n="stats.obligations">obligations</i></span>
+            <span><b id="stat-updates">—</b> <i data-i18n="stats.events">events</i></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticker" aria-label="产品特性">
+        <div>AUTHORITATIVE SOURCES <i>✦</i> PROVENANCE BY DEFAULT <i>✦</i> IDEMPOTENT UPDATES <i>✦</i> HK + SINGAPORE PILOT <i>✦</i> AUTHORITATIVE SOURCES <i>✦</i> PROVENANCE BY DEFAULT <i>✦</i></div>
+      </div>
+
+      <div class="home-grid">
+        <section class="latest-panel reveal">
+          <div class="section-heading">
+            <div><span class="section-index">01</span><h2 data-i18n="latest.title">Latest regulatory signals</h2></div>
+            <a href="/data-trace/timeline" data-i18n="latest.all">Full timeline →</a>
+          </div>
+          <div id="latest-updates" class="signal-list skeleton-wrap" aria-live="polite"></div>
+        </section>
+        <aside class="coverage-panel reveal delay-1">
+          <span class="section-index">02</span>
+          <h2 data-i18n="coverage.title">Jurisdiction coverage</h2>
+          <button class="territory-card" data-jurisdiction-jump="HK">
+            <span class="territory-code">HK</span>
+            <span><b data-i18n="coverage.hk">Hong Kong</b><small>PDPO · finance · telecoms</small></span><i>↗</i>
+          </button>
+          <button class="territory-card dark" data-jurisdiction-jump="SG">
+            <span class="territory-code">SG</span>
+            <span><b data-i18n="coverage.sg">Singapore</b><small>PDPA · finance · telecoms</small></span><i>↗</i>
+          </button>
+          <div class="source-note"><span>✓</span><p data-i18n="coverage.source"><b>Source-verifiable</b><br>Every record retains its authority, primary link, version date and content fingerprint.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="library" class="view" data-view="library">
+      <header class="page-header">
+        <div><span class="eyebrow">STRUCTURED REGULATION LIBRARY</span><h1 data-i18n="library.title">Regulation is more than a PDF.</h1></div>
+        <p data-i18n="library.body">Filter by jurisdiction, industry and topic; open any record for structured obligations, version data and the authoritative source.</p>
+      </header>
+      <div class="filter-bar">
+        <label class="search-box"><span>⌕</span><input id="reg-search" type="search" placeholder="Search rules, duties or authorities" data-i18n-placeholder="library.search" autocomplete="off"></label>
+        <div class="filter-group" aria-label="Jurisdiction filter">
+          <button class="chip active" data-jurisdiction="" data-i18n="filter.all">All</button><span id="library-jurisdiction-chips" class="jurisdiction-chips"></span>
+        </div>
+        <select id="industry-filter" aria-label="Industry filter"><option value="" data-i18n="filter.allIndustries">All industries</option></select>
+        <select id="topic-filter" aria-label="Topic filter"><option value="" data-i18n="filter.allTopics">All topics</option></select>
+        <select id="type-filter" aria-label="Instrument type">
+          <option value="" data-i18n="filter.allTypes">All instrument types</option><option value="legislation" data-i18n="type.legislation">Primary legislation</option><option value="subsidiary_legislation" data-i18n="type.subsidiary_legislation">Subsidiary legislation</option><option value="regulator_guidance" data-i18n="type.regulator_guidance">Regulatory guidance</option><option value="code_of_practice" data-i18n="type.code_of_practice">Code of practice</option>
+        </select>
+      </div>
+      <div class="results-meta"><span id="result-count">Loading…</span><span>DATASET · 2026.08.09</span></div>
+      <div id="regulation-grid" class="regulation-grid skeleton-wrap" aria-live="polite"></div>
+    </section>
+
+    <section id="timeline" class="view" data-view="timeline">
+      <header class="page-header timeline-header">
+        <div><span class="eyebrow">AMENDMENT / COMMENCEMENT / GUIDANCE</span><h1 data-i18n="timeline.title">Regulatory change timeline</h1></div>
+        <div class="filter-group" aria-label="Timeline jurisdiction filter">
+          <button class="chip active" data-timeline-jurisdiction="" data-i18n="filter.all">All</button><span id="timeline-jurisdiction-chips" class="jurisdiction-chips"></span>
+        </div>
+      </header>
+      <div class="timeline-layout">
+        <aside class="timeline-legend">
+          <p data-i18n="timeline.body">Every commencement, amendment and guidance event links back to its instrument and official source.</p>
+          <ul><li><i class="high"></i><span data-i18n="impact.high">High impact</span></li><li><i class="medium"></i><span data-i18n="impact.medium">Medium impact</span></li><li><i class="low"></i><span data-i18n="impact.low">Routine</span></li></ul>
+        </aside>
+        <div id="timeline-list" class="timeline-list skeleton-wrap"></div>
+      </div>
+    </section>
+
+    <section id="subscribe" class="view" data-view="subscribe">
+      <div class="subscribe-layout">
+        <div class="subscribe-copy">
+          <span class="eyebrow">SIGNAL DELIVERY</span>
+          <h1 data-i18n="subscribe.title">Do not leave change<br>inside the browser.</h1>
+          <p data-i18n="subscribe.body">Choose a fixed jurisdiction plan and delivery mode. Daily briefings run at 08:00 Beijing time; high-impact alerts are prepared immediately.</p>
+          <div class="briefing-preview">
+            <div class="mail-window-head"><span></span><span></span><span></span><b>DAILY BRIEFING / PREVIEW</b></div>
+            <div id="briefing-preview-body">Generating the latest briefing preview…</div>
+          </div>
+        </div>
+        <form id="subscription-form" class="subscription-card" novalidate>
+          <div class="form-head"><span data-i18n="subscribe.settings">Subscription settings</span><span class="step-label">01 / 02 / 03</span></div>
+          <div id="pending-confirmation" class="pending-confirmation" role="status" hidden></div>
+          <label class="field"><span data-i18n="subscribe.email">Work email</span><input id="email" type="email" placeholder="name@company.com" required></label>
+          <fieldset><legend data-i18n="subscribe.delivery">Delivery</legend>
+            <label class="option"><input id="daily-briefing" type="checkbox" checked><span class="fake-check">✓</span><span><b data-i18n="subscribe.daily">Daily briefing</b><small data-i18n="subscribe.dailyNote">Every day at 08:00 Beijing time</small></span></label>
+            <label class="option"><input id="update-alert" type="checkbox" checked><span class="fake-check">✓</span><span><b data-i18n="subscribe.alert">Regulatory update alert</b><small data-i18n="subscribe.alertNote">Immediate delivery for new or amended rules</small></span></label>
+          </fieldset>
+          <fieldset><legend data-i18n="subscribe.plan">Jurisdictions</legend>
+            <div id="subscription-jurisdiction-choices" class="jurisdiction-choices"></div>
+          </fieldset>
+          <button class="button primary submit-button" type="submit"><span data-i18n="subscribe.save">Save subscription</span> <span>→</span></button>
+          <p class="fine-print" data-i18n="subscribe.fine">Each email contains recipient-specific management and unsubscribe links. No marketing mail.</p>
+          <div id="subscription-feedback" class="feedback" role="status"></div>
+          <div id="manage-actions" class="manage-actions" hidden>
+            <button type="button" id="unsubscribe-button" data-i18n="subscribe.unsubscribe">Unsubscribe</button><span>Subscription ID: <code id="subscriber-id"></code></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">DT</span><span>DATA TRACE<small>TRACE CHANGE. PROVE SOURCE.</small></span></div>
+    <p data-i18n="footer.note">Hong Kong + Singapore pilot · source check 2026-08-09<br>Tracking information only; not legal advice.</p>
+    <a href="/data-trace/">BACK TO TOP ↑</a>
+  </footer>
+
+  <div id="detail-overlay" class="detail-overlay" hidden>
+    <button class="overlay-backdrop" aria-label="Close details"></button>
+    <aside class="detail-drawer" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <button id="detail-close" class="detail-close" aria-label="Close">×</button>
+      <div id="detail-content"></div>
+    </aside>
+  </div>
+  <script src="static-data.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
