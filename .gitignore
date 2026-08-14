@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+data-trace/data/*.sqlite
+data-trace/data/*.sqlite-*
+.env
