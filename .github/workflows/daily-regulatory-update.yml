@@ -35,7 +35,9 @@ jobs:
       - name: Rebuild static demo
         run: DEMO_DATABASE_PATH=$RUNNER_TEMP/datatrace.sqlite node scripts/build-static-demo.mjs
       # ④ 有变化才提交；提交会触发 Pages 自动部署
+      # 注意：site/ 位于仓库根，本步骤须回到仓库根执行（job 默认 working-directory 是 data-trace）
       - name: Commit and push changes
+        working-directory: ${{ github.workspace }}
         run: |
           git config user.name 'datatrace-bot'
           git config user.email 'bot@datatrace.invalid'
