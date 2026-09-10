@@ -1,6 +1,294 @@
 [
  {
-  "id": "upd_ing_3d54f893-8c11-4e78-8b55-c431ecfce58d",
+  "id": "upd_ing_f7fab1a7-07a3-4c85-9952-64af6b09f92a",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_1_cap_300_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 1 — 300 (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 1 — 300 (Current version, English). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "f7c51b1175f20bcaec2b2ca447484215881b70a5dc4d85c579e33a240794b5ec",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_150b0667-992d-4a39-950f-040fc5c52a20",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_301_cap_600_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 301 — 600 (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 301 — 600 (Current version, English). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "bdd38c51d6279303673c77ebd472af2e28811c7c4638dce922ff056feef337c7",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_cd40fbc8-d8a7-4ccb-bcbf-9dde4d492173",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_601_cap_end_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 601 and onwards (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 601 and onwards (Current version, English). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "5f45a4970f08bfedce9df6ac4897c6a58e82b7f9441a74d66e628c343e542ae6",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_7ffe6b12-36e9-4dab-909b-048a5c2a71ac",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_instruments_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Instruments & Others (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Instruments & Others (Current version, English). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "4b2b69de10764cca996169a64657d03161a57f565a0e86ab638ecd040b977ccb",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_174dce6f-1e81-4c7c-b169-5a227df4eed8",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_1_cap_300_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "ffed25e65badd6f5a519aa2cbc440c0aa4a39bf75e3f4591602211e50ee1f0eb",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_79c368f5-b90d-495c-a9bb-10ae8884042e",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_301_cap_600_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "2ea83c1e65e87455d241b4a01c961164d0dbae60953a886acf45fb4fd73e7798",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_1d880a11-902c-4609-b2b9-02e5b6ebd272",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_601_cap_end_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "da3c5d74428107edffaf4b5c5d3b8412d8b411ec0132fda9c1b1b1f7e3ef6fac",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_c83eab57-7aaa-4b74-8407-1439441302ea",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_instruments_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "e0212d712fd474c944bd35af8e87451404eca9151b89f0cdbf642a9ea8c4624e",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_eae979de-73ad-42ae-ac47-1e0b9a6a0d77",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_1_cap_300_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "91e65837adbeff95fb9940f7e60d121564321bd54b26b4a9e8fa57070bd5281b",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_f90b8bfc-6e97-4a76-9ea0-eb29d29e583c",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_301_cap_600_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "d06ba7b96678810fce12fc3058754f9f2267b971e23558da4f073d4a7e086b32",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_3e26455f-1e9d-44a7-bfc9-de42b72de43d",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_601_cap_end_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "9f2bbd966a77b41228696cbdc049ed890b6cca6fc856667c7d70f74697332c0f",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_d71b37a9-b14c-43d1-8e6e-173a74239db4",
+  "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_instruments_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-09-07",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
+  "contentHash": "2781c558e4e581364a476275bd6c34a63036624a8a033be8c9fda04dc19e392e",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
+ },
+ {
+  "id": "upd_ing_0369c9a1-fbdc-494c-b651-467fcf1f1f16",
   "externalId": "hk:event:pcpd-press:2026-09-01-press_20260901",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -16,12 +304,12 @@
   "summaryZh": "【自动收录】In Alignment with the National 15th Five-Year Plan Privacy Commissioner’s Office and Digital Policy Office Jointly Organise Briefing Session on the Safeguarding Personal Data AI Sandbox（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260901.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "82b18d82026d7c96d6d54fc9a685e07c9e621c26a6e17111a5b64ed3ac297c27",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
   "id": "upd_ing_272693cd-a724-46b1-9a02-8ac599ba1971",
@@ -312,7 +600,7 @@
   "updatedAt": "2026-09-07T06:49:40.488Z"
  },
  {
-  "id": "upd_ing_47f3b5b4-ee76-4029-bea5-094affe9e0fd",
+  "id": "upd_ing_f3fdab6e-a17e-4371-a0af-4cd359273d73",
   "externalId": "hk:event:pcpd-press:2026-08-27-press_20260827",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -328,15 +616,15 @@
   "summaryZh": "【自动收录】A 29-year-old Male Arrested for Suspected Doxxing of a Competitor（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260827.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "6746c8922a15fd9e9bb3f109b75f54dabdf0f06852dbba5daa15a5b517159c0d",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_3472a35b-1c15-426e-8ef6-d9fc1b030cd0",
+  "id": "upd_ing_62b114d3-159c-4765-8237-ebd3ce7d1a27",
   "externalId": "hk:event:pcpd-press:2026-08-25-press_20260825",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -352,12 +640,12 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office (1) Follows up on Three Cases Involving Misuse of Employers’ Personal Data by Foreign Domestic Helpers for Loan Applications and (2) Publishes Guidance on “Protecting Personal Data Privacy in the Use of Agentic AI”（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260825.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "f8dd666b0bff90026190dae2671136a33dc83d4f32efc2f8cb7d802c5f8fd965",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
   "id": "upd_ing_6f3fd7a1-15a9-43df-83ee-c5499c659285",
@@ -648,7 +936,7 @@
   "updatedAt": "2026-08-30T07:41:02.719Z"
  },
  {
-  "id": "upd_ing_b7cc8a39-d2c2-414f-b180-56e0b2f39aee",
+  "id": "upd_ing_862ccd05-66be-42fd-9c35-91c0f8113c62",
   "externalId": "hk:event:pcpd-press:2026-08-20-press_20260820",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -664,12 +952,12 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Publishes Investigation Findings on the Data Breach Incident of the Online Learning Management Platform Canvas（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260820.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "4b98b869efb5b1722a1efd212f018fa3274640042cc988672ef20e2282c75e55",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
   "id": "upd_ing_7485fa19-2789-4372-abc0-8e37321417a1",
@@ -960,7 +1248,7 @@
   "updatedAt": "2026-08-24T02:55:56.294Z"
  },
  {
-  "id": "upd_ing_7bafc4ed-18ae-465a-8bc7-609d222a4ffc",
+  "id": "upd_ing_78eb0f40-1ac4-4e52-b2f8-2d3f9ae7e75e",
   "externalId": "hk:event:pcpd-press:2026-08-13-press_20260813",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -976,15 +1264,15 @@
   "summaryZh": "【自动收录】PCPD and HKIRC Sign MoU and Jointly Launch the “Data Privacy and Web Security Scan Programme” to Mitigate Risks of Personal Data Leaks（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260813.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "0c3ace547eab4d7b8f9ba7ec71451c6bd31612dc6c42a0963dfcbb7348cb0303",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_54bced4a-93bf-4037-b03d-63ccaac4404b",
+  "id": "upd_ing_ef504d10-c474-4044-9f0a-9bccda11d5d1",
   "externalId": "hk:event:pcpd-press:2026-08-11-press_20260811",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1000,12 +1288,12 @@
   "summaryZh": "【自动收录】A 37-year-old Male Arrested for Suspected Doxxing of a Former Restaurant Owner and an Agent Arising from Monetary Disputes（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260811.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "fd24d2307afd19d8d35f44e519fd4e15fd0399e7546f11acca216c57a05966c1",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
   "id": "upd_ing_07a3879f-315a-4cee-8997-6d89a9be5aa4",
@@ -1296,7 +1584,7 @@
   "updatedAt": "2026-08-17T02:52:47.354Z"
  },
  {
-  "id": "upd_ing_6e14e6bc-ac53-445c-a6aa-e854f14c41fa",
+  "id": "upd_ing_feeada79-98e5-4443-a2ad-79e7c518a541",
   "externalId": "hk:event:pcpd-press:2026-08-04-press_20260804",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1312,15 +1600,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Urges Caution against Suspected Fraudulent E-Visa Websites（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260804.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "7bd32117b4839145f0a751f2bfc1dff0ff888ba9e09cccddb7d9210e8541ed5e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_eb88d453-c65c-4185-9a0b-757054f9babf",
+  "id": "upd_ing_4b78110d-4bd8-443a-89d7-fbc896a5e55f",
   "externalId": "hk:event:pcpd-press:2026-07-27-press_20260727",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1336,15 +1624,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Wins Governance Project of the Year and Outreach Project of the Year at Asia-Pacific Awards（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260727.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "95cd8f7067ec44df35064911473cbfec6e5832d5ecd3de79d15f655d1d598f37",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_99bf29bf-b108-4cae-8a9c-ca2846635217",
+  "id": "upd_ing_9640b63c-6465-4afa-aadf-3ef2226f988c",
   "externalId": "hk:event:pcpd-press:2026-07-23-press_20260723",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1360,15 +1648,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner Promotes China’s Initiative at Asia DPA Exchange Joining Hands to Build a Global AI Governance System（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260723.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "4449d8e230b32d8a0500a61e066b94b28288f51097830564c87614d2a6d518fa",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_0328fe29-f6bd-456f-9016-d840be1d7283",
+  "id": "upd_ing_d8e19216-11fe-4989-9ca5-bd7082635396",
   "externalId": "hk:event:pcpd-press:2026-07-06-press_20260706",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1384,15 +1672,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office and Digital Policy Office Collaborate to Launch the Safeguarding Personal Data AI Sandbox（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260706.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "9bc7506829045db390bf9dedfcec50109c9856c2ae1102eab1b70dce38ad8069",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_2ba39cc7-b1cf-4e80-a082-9f09ca01bb20",
+  "id": "upd_ing_1d91a230-f70c-4989-a4fe-419d42eac059",
   "externalId": "hk:event:pcpd-press:2026-06-30-press_20260630",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1408,15 +1696,15 @@
   "summaryZh": "【自动收录】Appointments of Two New Members to the Standing Committee on Technological Developments of the Privacy Commissioner’s Office（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260630.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "b78823387c5c36274149b2f8ff2e50cd53b115d62fa62a2b2fd77750a94db297",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_b4845516-4150-45c5-8f9f-a335e821d160",
+  "id": "upd_ing_ea58dcca-0414-4b3a-a18c-40054553054b",
   "externalId": "hk:event:pcpd-press:2026-06-22-press_20260622",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1432,15 +1720,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Hosts the 65th Asia Pacific Privacy Authorities Forum（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260622.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "944f4d3cfee16cf483a2476aa0eb07c7618ecde8a22e75888131f0707899180a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_85f597da-b452-4c0c-aa5f-5660cb2d326b",
+  "id": "upd_ing_58b4e5fb-3d2a-4b67-83af-d9afcb271ad6",
   "externalId": "hk:event:pcpd-press:2026-06-16-press_20260616",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1456,15 +1744,15 @@
   "summaryZh": "【自动收录】PCPD Successfully Holds 30th Anniversary Privacy Protection Summit Over 400 Participants from Hong Kong, the Chinese Mainland and Overseas Gather Together to Witness the Launch of “Hong Kong International Data Privacy Academy”（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260616.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "ddfb9b3d620141aea980456e5a8718ef2560ecc9068704db1a9601f17b6a4387",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_8efa9fb1-cee9-4916-b24e-6bda1c4a6398",
+  "id": "upd_ing_66d9738a-cf8f-4f78-be3e-a9bbe0696a03",
   "externalId": "hk:event:pcpd-press:2026-05-21-press_20260521",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1480,15 +1768,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Urges Vigilance Against Scammers Impersonating Electrical Appliance Retailer（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260521.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "1d4f4a05141c3ecbcac8733b3689f8a14e5424141fe46c843e7d5b53fbd8d8c6",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_6083c7bd-7940-4c79-891a-0da33dfd9930",
+  "id": "upd_ing_71e95545-9850-4d7f-8e76-0040a93b5478",
   "externalId": "hk:event:pcpd-press:2026-05-19-press_20260519",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1504,15 +1792,15 @@
   "summaryZh": "【自动收录】The Privacy Commissioner’s Office has Completed  Compliance Checks on 60 Organisations  Regarding the Impact of the Use of Artificial Intelligence on Personal Data Privacy（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260519.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "a19dfa4626475fed3423b3d52990d413e9cc7e78804b36537ad3d7a25cf31c73",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_b58f33c3-6a06-4cba-a56c-cab0f8a41401",
+  "id": "upd_ing_e5471d25-9c90-44c0-b0b2-22a3c67279eb",
   "externalId": "hk:event:pcpd-press:2026-05-15-press_20260515",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1528,15 +1816,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Reminds Affected Organisations and the Public to Safeguard Personal Data Privacy In Relation to the Canvas Data Breach Incident（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260515.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "5ebac734b2f4fabda76e3ef343f7f0e2435004900bd272d3940fc4fc39bd4149",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_4dcc06ca-b0ae-409e-99dc-537aff01ef00",
+  "id": "upd_ing_2b2c5d22-0626-44e4-acbb-63b7048d6dc9",
   "externalId": "hk:event:pcpd-press:2026-05-13-press_20260513",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1552,15 +1840,15 @@
   "summaryZh": "【自动收录】Instagram Discontinues “End-to-end Encrypted Messaging” Feature Privacy Commissioner’s Office Reminds Users to Safeguard Personal Data Privacy（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260513.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "5fbe6e59e1dabfce02b7933cb3e35c4de9f71dff065ba717ff0e8e03be05cec5",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_cb5d9045-ea1a-4263-a91e-a9ab179adb6e",
+  "id": "upd_ing_4214801b-63ea-4ad1-b624-c65cd15daab9",
   "externalId": "hk:event:pcpd-press:2026-04-29-press_20260429",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1576,15 +1864,15 @@
   "summaryZh": "【自动收录】A 23-year-old Female Arrested for Suspected Doxxing  of Her Former Schoolmate Because of Personal Disputes（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260429.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "6d3da8feec5fd9488fdbf4c7d997684f78d26e8f38adce3d80b4449483ceb81c",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_f1a486cd-06ac-4c01-86bb-a2893f245d17",
+  "id": "upd_ing_3b07cb5b-9029-456a-a18e-c0dfbd6c9948",
   "externalId": "hk:event:pcpd-press:2026-04-23-press_20260423",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1600,15 +1888,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Publishes (1) an Investigation Report on the Data Breach Incident of Yau Yat Chuen Garden City Club and (2) Practical Tips on Safeguarding Children’s Online Privacy（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260423.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "3b54e5eeaba70fea842f77e387e849fc1946de7fc6ede2e32681a357c7244f79",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
-  "id": "upd_ing_a429c90d-2316-471c-aff3-bf598f18e654",
+  "id": "upd_ing_e046bb76-734b-4c09-aff6-62457b3e3230",
   "externalId": "hk:event:pcpd-press:2026-04-21-press_20260421",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1624,12 +1912,12 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Convenes Learning Session on the National 15th Five-Year Plan（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260421.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-09T06:54:29.308Z",
+  "sourceCheckedAt": "2026-09-10T06:50:53.962Z",
   "contentHash": "93de2feb8120813eef92f8e1c49fb12342543778355ac6a37125da8f109b746d",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.308Z",
-  "updatedAt": "2026-09-09T06:54:34.162Z"
+  "createdAt": "2026-09-10T06:50:53.962Z",
+  "updatedAt": "2026-09-10T06:51:02.991Z"
  },
  {
   "id": "upd_ing_c020ba37-0fa3-49b4-a407-63048bc49182",
@@ -1753,8 +2041,8 @@
   "contentHash": "cf00dbd72187736dfbc839ccb1e51f547fbf5f32be9d3f8c4e0809a6ee964c77",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_pdpa_2025",
@@ -1784,8 +2072,8 @@
   "contentHash": "4240d447834d58a1f947a9e3133294999df7e68ff04cc3bddd907352f04e2a9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_breach_regs_2024",
@@ -1812,8 +2100,8 @@
   "contentHash": "ab45fe6ac3fa8bdf5b1cbeabbe81801e5ebdf59b7f526ee907d37db3a485a953",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_hkid_guide_2024",
@@ -1841,8 +2129,8 @@
   "contentHash": "04e949c0c97bee7386599e55f9229ffb38f55d5a411b6215ad3c1640634204e4",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_gba_scc_2023",
@@ -1868,8 +2156,8 @@
   "contentHash": "cb60c736262fba1081150b996918a2179230b96803901c3e8dfaae9bdc33a758",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_breach_guide_2023",
@@ -1896,8 +2184,8 @@
   "contentHash": "24aa320d13544429099fba92c2562b1eb53c509ed861a34d5c91e72891a86776",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_penalties_2022",
@@ -1927,8 +2215,8 @@
   "contentHash": "8173f373c6dbc2e9a8dec155c67e428f45172d13c0cf6af7604442fbe290367a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_doxxing_2021",
@@ -1958,8 +2246,8 @@
   "contentHash": "fefed3b02f2f1014eccd14de476f0a57940728e57ddd47e3b81127dbaf9e75ff",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_2020_amendment",
@@ -1989,8 +2277,8 @@
   "contentHash": "ce48c888a358260213b7d9f03d68b724837b700fd2d45b3604f5c48d8d2bf1da",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_breach_regs",
@@ -2017,8 +2305,8 @@
   "contentHash": "11c9fcebdb50191d736758ccb23c10dbd11821f16c271ffcfb0d38bb065ca665",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_mas_trm_2021",
@@ -2047,8 +2335,8 @@
   "contentHash": "555044f582f95df6f13c36b2dfd26974286f072875e3f48da765efb16d3bf8d2",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_sg_core_2014",
@@ -2078,8 +2366,8 @@
   "contentHash": "1db85f94299bd0558313adbcc737126dd7787248477839b649ec52c555d6e174",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_direct_marketing_2013",
@@ -2109,8 +2397,8 @@
   "contentHash": "f44b062ff057966f977bb89bdbe7e1538db7fb3fc58056f448294c66287e1f9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_uemo_2007",
@@ -2139,8 +2427,8 @@
   "contentHash": "d994ed1d6ef83fefec9da0e0f8bbb7dd048501c966c5a352a0ae3ef4fe4ea11a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_tmg1_issue_2003",
@@ -2169,8 +2457,8 @@
   "contentHash": "8d707fa48f3a18024929ee9634a1e5eb28b818ca47f3224c700f2df6d9405295",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  },
  {
   "id": "upd_hk_pdpo_commencement",
@@ -2200,7 +2488,7 @@
   "contentHash": "3d5861e2efbbd3480916f4e37e0d13f7698aedad7ea254f11558732f7c6fcfab",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-09T06:54:29.304Z",
-  "updatedAt": "2026-09-09T06:54:34.249Z"
+  "createdAt": "2026-09-10T06:50:53.957Z",
+  "updatedAt": "2026-09-10T06:51:03.085Z"
  }
 ]
