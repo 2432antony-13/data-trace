@@ -1,5 +1,29 @@
 [
  {
+  "id": "upd_ing_becfcaa6-8a4e-4998-8deb-9e65d10e0e68",
+  "externalId": "hk:event:pcpd-press:2026-09-16-press_20260916",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Privacy Commissioner’s Office Welcomes Hong Kong’s First Five-Year Plan and the Policy Address",
+  "summary": "New PCPD Hong Kong update detected: Privacy Commissioner’s Office Welcomes Hong Kong’s First Five-Year Plan and the Policy Address. Pending editorial review.",
+  "eventDate": "2026-09-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Privacy Commissioner’s Office Welcomes Hong Kong’s First Five-Year Plan and the Policy Address（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260916.html",
+  "sourceName": "PCPD Hong Kong",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
+  "contentHash": "aabcf978fed73deaf132897c4c09f3ffbda123d22375ba1daa92c88922446c18",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
+ },
+ {
   "id": "upd_ing_22b36101-3514-4dda-9a03-2b5385c76336",
   "externalId": "hk:event:hkel-dataset:2026-09-07-hkel_c_leg_cap_1_cap_300_en",
   "regulationId": null,
@@ -288,7 +312,7 @@
   "updatedAt": "2026-09-14T07:22:53.840Z"
  },
  {
-  "id": "upd_ing_1d5bef19-f48d-46a0-85a0-91a981518dcb",
+  "id": "upd_ing_b9cdbbfa-b5f4-4e8f-a82d-c452af7ca974",
   "externalId": "hk:event:pcpd-press:2026-09-01-press_20260901",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -304,12 +328,12 @@
   "summaryZh": "【自动收录】In Alignment with the National 15th Five-Year Plan Privacy Commissioner’s Office and Digital Policy Office Jointly Organise Briefing Session on the Safeguarding Personal Data AI Sandbox（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260901.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "82b18d82026d7c96d6d54fc9a685e07c9e621c26a6e17111a5b64ed3ac297c27",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
   "id": "upd_ing_272693cd-a724-46b1-9a02-8ac599ba1971",
@@ -600,7 +624,7 @@
   "updatedAt": "2026-09-07T06:49:40.488Z"
  },
  {
-  "id": "upd_ing_49489656-f3d3-491f-b9da-16c832208eb9",
+  "id": "upd_ing_e36653a5-b9af-4b87-81e3-879825ebc7c4",
   "externalId": "hk:event:pcpd-press:2026-08-27-press_20260827",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -616,15 +640,15 @@
   "summaryZh": "【自动收录】A 29-year-old Male Arrested for Suspected Doxxing of a Competitor（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260827.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "6746c8922a15fd9e9bb3f109b75f54dabdf0f06852dbba5daa15a5b517159c0d",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_d40b1268-e52a-406e-a3d2-9f176c810f0e",
+  "id": "upd_ing_fe59934f-3bbe-4329-96c7-dd00c9d8326e",
   "externalId": "hk:event:pcpd-press:2026-08-25-press_20260825",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -640,12 +664,12 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office (1) Follows up on Three Cases Involving Misuse of Employers’ Personal Data by Foreign Domestic Helpers for Loan Applications and (2) Publishes Guidance on “Protecting Personal Data Privacy in the Use of Agentic AI”（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260825.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "f8dd666b0bff90026190dae2671136a33dc83d4f32efc2f8cb7d802c5f8fd965",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
   "id": "upd_ing_6f3fd7a1-15a9-43df-83ee-c5499c659285",
@@ -936,7 +960,7 @@
   "updatedAt": "2026-08-30T07:41:02.719Z"
  },
  {
-  "id": "upd_ing_3dabe6c0-6edb-4325-addb-5f0f3fd4a07f",
+  "id": "upd_ing_949a6015-b8f5-4071-91d9-d2220dd33cd9",
   "externalId": "hk:event:pcpd-press:2026-08-20-press_20260820",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -952,12 +976,12 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Publishes Investigation Findings on the Data Breach Incident of the Online Learning Management Platform Canvas（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260820.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "4b98b869efb5b1722a1efd212f018fa3274640042cc988672ef20e2282c75e55",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
   "id": "upd_ing_7485fa19-2789-4372-abc0-8e37321417a1",
@@ -1248,7 +1272,7 @@
   "updatedAt": "2026-08-24T02:55:56.294Z"
  },
  {
-  "id": "upd_ing_defdc9cf-fd74-4ea5-b18e-000606626bb3",
+  "id": "upd_ing_7069e6c3-6d4f-4f22-9395-1f1340ab2859",
   "externalId": "hk:event:pcpd-press:2026-08-13-press_20260813",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1264,15 +1288,15 @@
   "summaryZh": "【自动收录】PCPD and HKIRC Sign MoU and Jointly Launch the “Data Privacy and Web Security Scan Programme” to Mitigate Risks of Personal Data Leaks（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260813.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "0c3ace547eab4d7b8f9ba7ec71451c6bd31612dc6c42a0963dfcbb7348cb0303",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_248f1462-fbb6-4214-a1b2-ba9bf78f6cbd",
+  "id": "upd_ing_f968b505-5d92-4c38-b1a7-a568292ad6b7",
   "externalId": "hk:event:pcpd-press:2026-08-11-press_20260811",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1288,12 +1312,12 @@
   "summaryZh": "【自动收录】A 37-year-old Male Arrested for Suspected Doxxing of a Former Restaurant Owner and an Agent Arising from Monetary Disputes（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260811.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "fd24d2307afd19d8d35f44e519fd4e15fd0399e7546f11acca216c57a05966c1",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
   "id": "upd_ing_07a3879f-315a-4cee-8997-6d89a9be5aa4",
@@ -1584,7 +1608,7 @@
   "updatedAt": "2026-08-17T02:52:47.354Z"
  },
  {
-  "id": "upd_ing_74ff31a4-3b38-43a2-85dc-7b93e6205aae",
+  "id": "upd_ing_54ae8cea-cc44-4e1e-ba0b-fb627bee7b02",
   "externalId": "hk:event:pcpd-press:2026-08-04-press_20260804",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1600,15 +1624,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Urges Caution against Suspected Fraudulent E-Visa Websites（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260804.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "7bd32117b4839145f0a751f2bfc1dff0ff888ba9e09cccddb7d9210e8541ed5e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_3127b341-3460-425c-8374-6e0490a40fcc",
+  "id": "upd_ing_5467d4ca-b858-4341-9d84-3ff083279b30",
   "externalId": "hk:event:pcpd-press:2026-07-27-press_20260727",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1624,15 +1648,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Wins Governance Project of the Year and Outreach Project of the Year at Asia-Pacific Awards（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260727.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "95cd8f7067ec44df35064911473cbfec6e5832d5ecd3de79d15f655d1d598f37",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_ff33e2a2-93bb-4d7a-b4f1-07b92e8620f0",
+  "id": "upd_ing_98cfd18b-9849-4981-96b8-331b89d26557",
   "externalId": "hk:event:pcpd-press:2026-07-23-press_20260723",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1648,15 +1672,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner Promotes China’s Initiative at Asia DPA Exchange Joining Hands to Build a Global AI Governance System（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260723.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "4449d8e230b32d8a0500a61e066b94b28288f51097830564c87614d2a6d518fa",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_f6f3a7b2-77cf-422a-9589-fbef568353c4",
+  "id": "upd_ing_50d2f160-c05e-4358-a0c9-b6f7ce0cefd5",
   "externalId": "hk:event:pcpd-press:2026-07-06-press_20260706",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1672,15 +1696,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office and Digital Policy Office Collaborate to Launch the Safeguarding Personal Data AI Sandbox（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260706.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "9bc7506829045db390bf9dedfcec50109c9856c2ae1102eab1b70dce38ad8069",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_480efd84-4f9b-41db-b332-b303eb34b266",
+  "id": "upd_ing_1a61c2d0-3194-4bdf-9a44-d758ae2db530",
   "externalId": "hk:event:pcpd-press:2026-06-30-press_20260630",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1696,15 +1720,15 @@
   "summaryZh": "【自动收录】Appointments of Two New Members to the Standing Committee on Technological Developments of the Privacy Commissioner’s Office（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260630.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "b78823387c5c36274149b2f8ff2e50cd53b115d62fa62a2b2fd77750a94db297",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_5eb68856-f734-4524-9cb9-a6de7de9c7ab",
+  "id": "upd_ing_a13a5db9-0e26-4627-a74b-9497a38e3ce1",
   "externalId": "hk:event:pcpd-press:2026-06-22-press_20260622",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1720,15 +1744,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Hosts the 65th Asia Pacific Privacy Authorities Forum（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260622.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "944f4d3cfee16cf483a2476aa0eb07c7618ecde8a22e75888131f0707899180a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_3534eaec-fa03-4fdc-9afb-fb8400f34e73",
+  "id": "upd_ing_5d3f380f-1bac-4b9a-b7cb-e79dbcbb60ac",
   "externalId": "hk:event:pcpd-press:2026-06-16-press_20260616",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1744,15 +1768,15 @@
   "summaryZh": "【自动收录】PCPD Successfully Holds 30th Anniversary Privacy Protection Summit Over 400 Participants from Hong Kong, the Chinese Mainland and Overseas Gather Together to Witness the Launch of “Hong Kong International Data Privacy Academy”（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260616.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "ddfb9b3d620141aea980456e5a8718ef2560ecc9068704db1a9601f17b6a4387",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_0d8c0117-10a3-458c-802c-df89d1179a1b",
+  "id": "upd_ing_b071fb15-bf91-44b7-bb9a-6df4d87508e6",
   "externalId": "hk:event:pcpd-press:2026-05-21-press_20260521",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1768,15 +1792,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Urges Vigilance Against Scammers Impersonating Electrical Appliance Retailer（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260521.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "1d4f4a05141c3ecbcac8733b3689f8a14e5424141fe46c843e7d5b53fbd8d8c6",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_c288dabc-240a-4830-aba4-5544fde26e82",
+  "id": "upd_ing_98e12290-ee68-4db0-aa86-97dbdcaf01da",
   "externalId": "hk:event:pcpd-press:2026-05-19-press_20260519",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1792,15 +1816,15 @@
   "summaryZh": "【自动收录】The Privacy Commissioner’s Office has Completed  Compliance Checks on 60 Organisations  Regarding the Impact of the Use of Artificial Intelligence on Personal Data Privacy（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260519.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "a19dfa4626475fed3423b3d52990d413e9cc7e78804b36537ad3d7a25cf31c73",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_404d488c-5d9a-4405-8979-d76a62c2e59d",
+  "id": "upd_ing_45f9bfe5-ee67-4c87-8753-b26cdfa027d3",
   "externalId": "hk:event:pcpd-press:2026-05-15-press_20260515",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1816,15 +1840,15 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Reminds Affected Organisations and the Public to Safeguard Personal Data Privacy In Relation to the Canvas Data Breach Incident（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260515.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "5ebac734b2f4fabda76e3ef343f7f0e2435004900bd272d3940fc4fc39bd4149",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_b81265c5-d4b5-4529-8c37-8fd29171fd43",
+  "id": "upd_ing_473a4f28-a2ea-42e6-9a7a-40af574cf104",
   "externalId": "hk:event:pcpd-press:2026-05-13-press_20260513",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1840,15 +1864,15 @@
   "summaryZh": "【自动收录】Instagram Discontinues “End-to-end Encrypted Messaging” Feature Privacy Commissioner’s Office Reminds Users to Safeguard Personal Data Privacy（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260513.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "5fbe6e59e1dabfce02b7933cb3e35c4de9f71dff065ba717ff0e8e03be05cec5",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_466eb81d-fe0a-4a3e-9989-206e71d9b48a",
+  "id": "upd_ing_48427104-f148-4316-9f46-8017eda3c03e",
   "externalId": "hk:event:pcpd-press:2026-04-29-press_20260429",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1864,15 +1888,15 @@
   "summaryZh": "【自动收录】A 23-year-old Female Arrested for Suspected Doxxing  of Her Former Schoolmate Because of Personal Disputes（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260429.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "6d3da8feec5fd9488fdbf4c7d997684f78d26e8f38adce3d80b4449483ceb81c",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
-  "id": "upd_ing_fc9dee6d-044f-4a76-a7c1-460c13cfea30",
+  "id": "upd_ing_f6e1e843-98b4-40f1-bfa4-6e783891cedd",
   "externalId": "hk:event:pcpd-press:2026-04-23-press_20260423",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -1888,12 +1912,12 @@
   "summaryZh": "【自动收录】Privacy Commissioner’s Office Publishes (1) an Investigation Report on the Data Breach Incident of Yau Yat Chuen Garden City Club and (2) Practical Tips on Safeguarding Children’s Online Privacy（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260423.html",
   "sourceName": "PCPD Hong Kong",
-  "sourceCheckedAt": "2026-09-14T07:22:49.390Z",
+  "sourceCheckedAt": "2026-09-18T06:53:05.613Z",
   "contentHash": "3b54e5eeaba70fea842f77e387e849fc1946de7fc6ede2e32681a357c7244f79",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.390Z",
-  "updatedAt": "2026-09-14T07:22:53.840Z"
+  "createdAt": "2026-09-18T06:53:05.613Z",
+  "updatedAt": "2026-09-18T06:53:10.254Z"
  },
  {
   "id": "upd_ing_788cbe72-7b8e-401a-a276-ba822ae777d1",
@@ -2041,8 +2065,8 @@
   "contentHash": "cf00dbd72187736dfbc839ccb1e51f547fbf5f32be9d3f8c4e0809a6ee964c77",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_pdpa_2025",
@@ -2072,8 +2096,8 @@
   "contentHash": "4240d447834d58a1f947a9e3133294999df7e68ff04cc3bddd907352f04e2a9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_breach_regs_2024",
@@ -2100,8 +2124,8 @@
   "contentHash": "ab45fe6ac3fa8bdf5b1cbeabbe81801e5ebdf59b7f526ee907d37db3a485a953",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_hkid_guide_2024",
@@ -2129,8 +2153,8 @@
   "contentHash": "04e949c0c97bee7386599e55f9229ffb38f55d5a411b6215ad3c1640634204e4",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_gba_scc_2023",
@@ -2156,8 +2180,8 @@
   "contentHash": "cb60c736262fba1081150b996918a2179230b96803901c3e8dfaae9bdc33a758",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_breach_guide_2023",
@@ -2184,8 +2208,8 @@
   "contentHash": "24aa320d13544429099fba92c2562b1eb53c509ed861a34d5c91e72891a86776",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_penalties_2022",
@@ -2215,8 +2239,8 @@
   "contentHash": "8173f373c6dbc2e9a8dec155c67e428f45172d13c0cf6af7604442fbe290367a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_doxxing_2021",
@@ -2246,8 +2270,8 @@
   "contentHash": "fefed3b02f2f1014eccd14de476f0a57940728e57ddd47e3b81127dbaf9e75ff",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_2020_amendment",
@@ -2277,8 +2301,8 @@
   "contentHash": "ce48c888a358260213b7d9f03d68b724837b700fd2d45b3604f5c48d8d2bf1da",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_breach_regs",
@@ -2305,8 +2329,8 @@
   "contentHash": "11c9fcebdb50191d736758ccb23c10dbd11821f16c271ffcfb0d38bb065ca665",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_mas_trm_2021",
@@ -2335,8 +2359,8 @@
   "contentHash": "555044f582f95df6f13c36b2dfd26974286f072875e3f48da765efb16d3bf8d2",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_sg_core_2014",
@@ -2366,8 +2390,8 @@
   "contentHash": "1db85f94299bd0558313adbcc737126dd7787248477839b649ec52c555d6e174",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_direct_marketing_2013",
@@ -2397,8 +2421,8 @@
   "contentHash": "f44b062ff057966f977bb89bdbe7e1538db7fb3fc58056f448294c66287e1f9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_uemo_2007",
@@ -2427,8 +2451,8 @@
   "contentHash": "d994ed1d6ef83fefec9da0e0f8bbb7dd048501c966c5a352a0ae3ef4fe4ea11a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_tmg1_issue_2003",
@@ -2457,8 +2481,8 @@
   "contentHash": "8d707fa48f3a18024929ee9634a1e5eb28b818ca47f3224c700f2df6d9405295",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  },
  {
   "id": "upd_hk_pdpo_commencement",
@@ -2488,7 +2512,7 @@
   "contentHash": "3d5861e2efbbd3480916f4e37e0d13f7698aedad7ea254f11558732f7c6fcfab",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-09-14T07:22:49.386Z",
-  "updatedAt": "2026-09-14T07:22:53.932Z"
+  "createdAt": "2026-09-18T06:53:05.609Z",
+  "updatedAt": "2026-09-18T06:53:10.338Z"
  }
 ]
