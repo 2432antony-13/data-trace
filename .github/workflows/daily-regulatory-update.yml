@@ -1,4 +1,4 @@
-# 每日法规自动更新（演示站）：定时抓取官方源 → 自动收录 → 重建 site/ → 推送触发 Pages 部署
+# 演示更新：采集 → 自动收录（非人工审校）→ 构建 → 固定提交 → 显式调用 Pages 部署。
 # 计划：UTC 02:00 = 北京时间 10:00（官方源一般已发布当日内容）；也可在 Actions 页手动触发。
 name: Daily regulatory update
 
@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: daily-regulatory-update
@@ -17,6 +19,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      source_sha: ${{ steps.publish.outputs.source_sha }}
     defaults:
       run:
         working-directory: data-trace
@@ -25,7 +29,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # ① 抓取官方源（HK 实时可用；SG 三源受 WAF 限制返回 0 条，不影响流程）
+      # 逐源结果在站点呈现；成功退出不表示所有来源均可用或内容经过审核。
       - name: Ingest official sources
         run: DATABASE_PATH=$RUNNER_TEMP/datatrace.sqlite node src/ingest/run.mjs --source hk,sg
       # ② 自动收录（演示模式）：待审校 → published，占位摘要标记【自动收录】
@@ -34,9 +38,10 @@ jobs:
       # ③ 用含新数据的库重建静态演示站
       - name: Rebuild static demo
         run: DEMO_DATABASE_PATH=$RUNNER_TEMP/datatrace.sqlite node scripts/build-static-demo.mjs
-      # ④ 有变化才提交；提交会触发 Pages 自动部署
+      # ④ 有变化才提交；后续 deploy 作业显式调用 Pages，而非依赖机器人 push 事件。
       # 注意：site/ 位于仓库根，本步骤须回到仓库根执行（job 默认 working-directory 是 data-trace）
       - name: Commit and push changes
+        id: publish
         working-directory: ${{ github.workspace }}
         run: |
           git config user.name 'datatrace-bot'
@@ -48,3 +53,9 @@ jobs:
             git commit -m 'data: daily regulatory update '$(date -u +%Y-%m-%d)
             git push
           fi
+          echo "source_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  deploy:
+    needs: update
+    uses: ./.github/workflows/pages.yml
+    with:
+      source_sha: ${{ needs.update.outputs.source_sha }}
