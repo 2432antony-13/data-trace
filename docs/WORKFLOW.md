@@ -18,6 +18,8 @@ npm run build:demo
 
 ## 渠道
 
+2026-10-26 实施状态：以下增强工作流已在本地准备，待账号取得 `workflow` 权限后推送。首轮试点使用现有 Pages 流程发布已提交的 `site/`，以部署运行的 SHA 与线上文件散列核对来源；该阶段没有 `deployment.json`。Projects 看板另待 `project` 权限。不要将这些待接入能力写成已完成。
+
 - main 代码变更：Pages workflow 检查、构建、记录制品指纹并部署。
 - 每日数据变更：采集并保留各源状态，演示自动收录，构建与提交后显式调用 Pages workflow。机器人 push 本身不是触发保证。
 - 公共 `deployment.json` 记录实际构建的提交、Actions URL 和文件 SHA-256；它证明制品来源，不等于内容经过专业审核。
