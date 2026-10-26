@@ -1,0 +1,26 @@
+name: Product task or defect
+description: Describe one user result and the evidence needed to accept it.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem and evidence
+      description: Who is affected, what happened, and on which version?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Scope and acceptance
+      description: Inputs, actions, expected results, failure cases and delivery channel.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and next action
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Implementation, checks and delivery evidence
+      description: Link exact commits/runs; unknown and not-run are valid states.

@@ -1,5 +1,5 @@
 const state = {
-  regulations: [], updates: [], jurisdiction: '', industry: '', topic: '', type: '', query: '', timelineJurisdiction: '',
+  regulations: [], updates: [], timelineUpdates: [], jurisdiction: '', industry: '', topic: '', type: '', query: '', timelineJurisdiction: '',
   jurisdictions: [], subscriptionJurisdictions: [],
   language: localStorage.getItem('dataTraceLanguage') || 'en',
   subscriber: JSON.parse(localStorage.getItem('dataTraceSubscriber') || 'null')
@@ -229,6 +229,25 @@ async function loadHealth() {
   }
 }
 
+async function loadSourceStatus() {
+  const panel = document.querySelector('#source-status');
+  if (!panel) return;
+  const zh = state.language === 'zh';
+  const labels = zh
+    ? { available: '采集可用', failed: '来源不可用', empty: '未匹配到条目，待核验', unknown: '尚无检查记录', running: '检查中' }
+    : { available: 'Collection available', failed: 'Source unavailable', empty: 'No matches — verification needed', unknown: 'Not yet checked', running: 'Checking' };
+  const dateLabel = (value) => value ? new Date(value).toLocaleString(zh ? 'zh-CN' : 'en-GB') : (zh ? '未确认' : 'Unconfirmed');
+  try {
+    const { sources } = await api('/api/source-status');
+    panel.innerHTML = `<h2>${zh ? '来源与数据时效' : 'Source coverage & freshness'}</h2>
+      <p>${zh ? '历史记录可继续浏览；来源检查成功不代表内容已完成人工审校。自动收录内容请核对官方原文。' : 'Historical records remain available. A successful source check is not editorial approval; verify automatically collected items against the official source.'}</p>
+      <ul>${sources.map((source) => `<li><strong>${escapeHtml(source.name)}</strong> · ${escapeHtml(labels[source.status] || labels.unknown)}<br><small>${zh ? '最近检查' : 'Last check'}: ${escapeHtml(dateLabel(source.checkedAt))} · ${zh ? '最近成功采集' : 'Last successful collection'}: ${escapeHtml(dateLabel(source.lastSuccessfulAt))}</small></li>`).join('')}</ul>`;
+  } catch {
+    panel.textContent = zh ? '来源状态暂不可读取，当前数据时效未确认。' : 'Source status is unavailable; data freshness is unconfirmed.';
+  }
+  panel.hidden = false;
+}
+
 async function loadTaxonomy() {
   try {
     const { data } = await api('/api/taxonomy');
@@ -296,10 +315,11 @@ async function loadUpdates() {
   try {
     const payload = await api('/api/updates');
     const next = payload.data;
-    if (JSON.stringify(state.updates) === JSON.stringify(next)) return; // 无变化则跳过重渲染
-    state.updates = next;
-    renderLatest();
-    renderTimeline();
+    if (JSON.stringify(state.updates) !== JSON.stringify(next)) {
+      state.updates = next;
+      renderLatest();
+    }
+    await loadTimeline();
   } catch (error) {
     renderUpdatesError(error.message);
   }
@@ -311,8 +331,22 @@ function renderLatest() {
       <div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(state.language === 'zh' ? item.summaryZh : item.summary)}</p></div><i>↗</i>
     </article>`).join('');
 }
+let timelineRequestId = 0;
+async function loadTimeline() {
+  const requestId = ++timelineRequestId;
+  try {
+    const params = new URLSearchParams({ limit: '100' });
+    if (state.timelineJurisdiction) params.set('jurisdiction', state.timelineJurisdiction);
+    const { data } = await api(`/api/updates?${params}`);
+    if (requestId !== timelineRequestId) return;
+    state.timelineUpdates = data;
+    renderTimeline();
+  } catch (error) {
+    if (requestId === timelineRequestId) document.querySelector('#timeline-list').innerHTML = errorCard(error.message, 'updates');
+  }
+}
 function renderTimeline() {
-  const items = state.timelineJurisdiction ? state.updates.filter((item) => item.jurisdiction === state.timelineJurisdiction) : state.updates;
+  const items = state.timelineUpdates;
   document.querySelector('#timeline-list').innerHTML = items.map((item) => `
     <article class="timeline-item ${escapeHtml(item.importance)}"><time class="timeline-date">${escapeHtml(item.eventDate.replaceAll('-', '.'))}</time>
       <div class="timeline-content"><div class="timeline-meta"><span>${escapeHtml(item.jurisdiction)}</span><span>${escapeHtml(eventLabels[state.language][item.eventType] || item.eventType)}</span></div>
@@ -528,7 +562,7 @@ async function unsubscribe() {
 
 // ---- 实时刷新（轮询 + 可见性） ----
 async function refreshLive() {
-  await Promise.allSettled([loadHealth(), loadUpdates()]);
+  await Promise.allSettled([loadHealth(), loadUpdates(), loadSourceStatus()]);
 }
 function startPolling() {
   window.setInterval(refreshLive, 5 * 60 * 1000);
@@ -540,7 +574,7 @@ let searchTimer;
 function bindEvents() {
   window.addEventListener('popstate', route);
   window.addEventListener('hashchange', route);
-  document.querySelector('#language-toggle').addEventListener('click', async () => { state.language = state.language === 'en' ? 'zh' : 'en'; localStorage.setItem('dataTraceLanguage', state.language); applyTranslations(); await loadTaxonomy(); });
+  document.querySelector('#language-toggle').addEventListener('click', async () => { state.language = state.language === 'en' ? 'zh' : 'en'; localStorage.setItem('dataTraceLanguage', state.language); applyTranslations(); await Promise.allSettled([loadTaxonomy(), loadSourceStatus()]); });
   document.querySelector('.menu-button').addEventListener('click', (event) => { const nav = document.querySelector('.topbar nav'); nav.classList.toggle('open'); event.currentTarget.setAttribute('aria-expanded', String(nav.classList.contains('open'))); });
   document.querySelector('#reg-search').addEventListener('input', (event) => { clearTimeout(searchTimer); searchTimer = setTimeout(() => { state.query = event.target.value.trim(); syncLibraryUrl(); loadRegulations(); }, 220); });
   for (const key of ['industry', 'topic', 'type']) document.querySelector(`#${key}-filter`).addEventListener('change', (event) => { state[key] = event.target.value; syncLibraryUrl(); loadRegulations(); });
@@ -557,7 +591,7 @@ function bindEvents() {
     const jurisdictionChip = event.target.closest('[data-jurisdiction]');
     if (jurisdictionChip) { state.jurisdiction = jurisdictionChip.dataset.jurisdiction; applyLibraryFilterControls(); syncLibraryUrl(); loadRegulations(); return; }
     const timelineChip = event.target.closest('[data-timeline-jurisdiction]');
-    if (timelineChip) { state.timelineJurisdiction = timelineChip.dataset.timelineJurisdiction; applyTimelineFilterControls(); renderTimeline(); return; }
+    if (timelineChip) { state.timelineJurisdiction = timelineChip.dataset.timelineJurisdiction; applyTimelineFilterControls(); loadTimeline(); return; }
     const card = event.target.closest('[data-regulation-id]'); if (card) { openRegulation(card.dataset.regulationId, card); return; }
     const update = event.target.closest('[data-update-regulation]'); if (update?.dataset.updateRegulation) { openRegulation(update.dataset.updateRegulation, update); return; }
   });
@@ -585,6 +619,6 @@ async function init() {
   route();
   initialized = true;
   startPolling();
-  await Promise.allSettled([loadHealth(), loadTaxonomy(), loadUpdates(), loadRegulations(), loadBriefingPreview()]);
+  await Promise.allSettled([loadHealth(), loadTaxonomy(), loadUpdates(), loadRegulations(), loadBriefingPreview(), loadSourceStatus()]);
 }
 init();

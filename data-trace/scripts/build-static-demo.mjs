@@ -17,12 +17,14 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
-import { createDataTraceServer } from '../src/server.mjs';
+import { spawnSync } from 'node:child_process';
+import { createDataTraceServer, mapUpdate } from '../src/server.mjs';
+import { getSourceStatus } from '../src/ingest/status.mjs';
 
 const moduleDir = dirname(fileURLToPath(import.meta.url));
 const dataTraceDir = resolve(moduleDir, '..');
 const repoRoot = resolve(dataTraceDir, '..');
-const outDir = resolve(repoRoot, 'site');
+const outDir = resolve(process.env.DEMO_OUTPUT_DIR || join(repoRoot, 'site'));
 const BASE_PATH = '/data-trace';
 const PAGES_URL = 'https://2432antony-13.github.io' + BASE_PATH + '/';
 
@@ -34,10 +36,11 @@ const { server, db } = createDataTraceServer({
   databasePath: demoDatabasePath,
   env: { MANAGE_LINK_SECRET: 'demo-build', PUBLIC_BASE_URL: PAGES_URL, CONFIRMATION_DRY_RUN: '1' }
 });
+try {
 
 // 数据连续性：把上次构建导出的 published 更新快照合并回演示库。
 // 本地重建（未注入 DEMO_DATABASE_PATH）时历史抓取数据不丢失。
-const snapshotPath = join(outDir, 'demo-updates.json');
+const snapshotPath = process.env.DEMO_SNAPSHOT_PATH || join(outDir, 'demo-updates.json');
 if (existsSync(snapshotPath)) {
   const snapshot = JSON.parse(readFileSync(snapshotPath, 'utf8'));
   const insertUpdate = db.prepare(`INSERT OR IGNORE INTO updates (
@@ -71,7 +74,12 @@ const health = await getJson('/api/health');
 const taxonomy = await getJson('/api/taxonomy');
 const jurisdictions = await getJson('/api/jurisdictions');
 const regulations = await getJson('/api/regulations');
-const updates = await getJson('/api/updates?limit=100');
+// Export the complete published corpus before applying API filter/limit semantics.
+// Taking the first 100 rows here drops older jurisdictions as the corpus grows.
+const updates = { data: db.prepare("SELECT * FROM updates WHERE status='published' ORDER BY event_date DESC, id").all().map(mapUpdate) };
+const statusPath = join(outDir, 'source-status.json');
+const previousStatus = existsSync(statusPath) ? JSON.parse(readFileSync(statusPath, 'utf8')) : { sources: [] };
+const sourceStatus = getSourceStatus(db, previousStatus);
 const previews = {
   '': await getJson('/api/briefings/preview'),
   HK: await getJson('/api/briefings/preview?jurisdiction=HK'),
@@ -92,6 +100,7 @@ window.__DT_STATIC__ = {
   basePath: '/data-trace',
   demoNotice: '静态演示版：浏览、筛选与搜索可用；订阅与邮件需部署全栈版。',
   health: ${JSON.stringify(health)},
+  sourceStatus: ${JSON.stringify(sourceStatus)},
   taxonomy: ${JSON.stringify(taxonomy)},
   jurisdictions: ${JSON.stringify(jurisdictions)},
   regulations: ${JSON.stringify(regulations.data)},
@@ -126,6 +135,7 @@ window.__DT_STATIC__ = {
   var S = window.__DT_STATIC__;
   var map = Object.assign({}, S.details, {
     '/api/health': S.health,
+    '/api/source-status': S.sourceStatus,
     '/api/taxonomy': S.taxonomy,
     '/api/jurisdictions': S.jurisdictions
   });
@@ -197,7 +207,7 @@ console.log('[demo-build] 筛选校验 13 组全部一致');
 
 // ---------- 改造 app.js（子路径 BASE_PATH 适配，逐处断言恰好一次） ----------
 console.log('[demo-build] 改造 app.js 路由…');
-let appJs = readFileSync(join(dataTraceDir, 'public/app.js'), 'utf8');
+let appJs = readFileSync(join(dataTraceDir, 'public/app.js'), 'utf8').replace(/\r\n/g, '\n');
 const patches = [
   ['const DEFAULT_TITLE = document.title;', 'const BASE_PATH = ' + JSON.stringify(BASE_PATH) + ';\nconst DEFAULT_TITLE = document.title;'],
   ["const DETAIL_PREFIX = '/regulations/';", "const DETAIL_PREFIX = BASE_PATH + '/regulations/';"],
@@ -237,6 +247,7 @@ writeFileSync(join(outDir, '404.html'), notFound);
 // ---------- 静态资源 ----------
 copyFileSync(join(dataTraceDir, 'public/styles.css'), join(outDir, 'styles.css'));
 writeFileSync(join(outDir, 'static-data.js'), staticJs);
+writeFileSync(statusPath, JSON.stringify(sourceStatus, null, 2) + '\n');
 writeFileSync(join(outDir, '.nojekyll'), '');
 
 // ---------- 防回归守卫：拦截器必须按 pathname 匹配（带 query 的请求会漏网）；404 正则必须完整 ----------
@@ -247,7 +258,6 @@ assert.ok(!appJs.includes("const url = '/library' +"), 'app.js 存在未加 BASE
 assert.ok(!appJs.includes("navigateTo('/library?"), 'app.js 存在未加 BASE_PATH 的跳转');
 
 // ---------- 语法校验产物 ----------
-import { spawnSync } from 'node:child_process';
 for (const file of ['app.js', 'static-data.js']) {
   const check = spawnSync(process.execPath, ['--check', join(outDir, file)], { encoding: 'utf8' });
   assert.equal(check.status, 0, file + ' 语法错误：' + check.stderr);
@@ -267,10 +277,13 @@ const snapshotOut = publishedRows.map((row) => {
     createdAt: row.created_at, updatedAt: row.updated_at
   };
 });
-writeFileSync(snapshotPath, JSON.stringify(snapshotOut, null, 1));
+writeFileSync(join(outDir, 'demo-updates.json'), JSON.stringify(snapshotOut, null, 1));
 assert.ok(snapshotOut.length >= 16, '快照应至少含 16 条种子事件');
 console.log('[demo-build] 已导出快照 site/demo-updates.json（published 共 ' + snapshotOut.length + ' 条）');
 
-await new Promise((resolvePromise) => server.close(resolvePromise));
-rmSync(tempDir, { recursive: true, force: true });
 console.log('[demo-build] 完成 → site/（index.html / app.js / styles.css / static-data.js / 404.html / demo-updates.json）');
+} finally {
+  if (server.listening) await new Promise((resolvePromise) => server.close(resolvePromise));
+  else db.close();
+  rmSync(tempDir, { recursive: true, force: true });
+}
