@@ -1,15 +1,15 @@
-## User result and task
+## 问题与结果
 
-Problem, linked Issue, scope and expected behavior:
+关联 Issue；描述具体触发条件、变化与验收。
 
-## Implementation and verification
+## 验证
 
-Source SHA, actual commands/scenarios, outcomes and evidence:
+- 来源提交、环境、实际命令/CI：
+- 结果与证据：
+- 未覆盖或失败项：
 
-Not run or not covered:
+## 交付与恢复
 
-## Delivery and recovery
+目标渠道、制品/数据影响、上一可用版本与恢复限制。只有文档变更时写明。
 
-Target channel, acceptance still needed, previous usable version and data limitations:
-
-Only use `Closes` when merging satisfies the Issue's acceptance. Keep user-facing delivery tasks open until the channel is verified. Self-review, independent review and user acceptance are separate facts.
+实施者自查与独立批准分别记录。合并后仍需部署/业务验收的任务保持开放。
