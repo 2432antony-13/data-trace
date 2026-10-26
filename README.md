@@ -12,7 +12,7 @@ DataTrace is an open-source regulatory intelligence platform for cross-border pr
 
 **https://2432antony-13.github.io/data-trace/**
 
-Browse the regulation library, timeline and bilingual UI with real seed data (22 instruments, 26 structured obligations, 16 update events). The demo **refreshes itself daily** — a scheduled GitHub Actions workflow ingests official sources, publishes new events and redeploys the site every day at 10:00 Beijing time. Subscriptions and email delivery require a full-stack deployment.
+Browse the regulation library, timeline and bilingual UI with real seed data (22 instruments, 26 structured obligations, 16 update events). A daily workflow is scheduled for 10:00 Beijing time; actual runs may be delayed. The site shows each source's last check and successful collection separately. Automatic demo collection is not editorial approval. Subscriptions and email delivery require a configured full-stack service; briefing dispatch is currently inactive.
 
 ## Highlights
 
@@ -26,7 +26,7 @@ Browse the regulation library, timeline and bilingual UI with real seed data (22
 
 ## Tech stack
 
-Node.js 22+ (built-in `node:sqlite` + `fetch`) · **zero runtime dependencies** · vanilla JS SPA · SQLite (WAL) · Docker / Caddy / systemd assets included · 11 automated tests
+Node.js 22+ (built-in `node:sqlite` + `fetch`) · **zero runtime dependencies** · vanilla JS SPA · SQLite (WAL) · Docker / Caddy / systemd assets included · automated API, ingestion, SMTP and static-export regression tests
 
 ## Quick start
 
@@ -60,5 +60,7 @@ Table-driven jurisdictions (18 pre-registered): **Hong Kong · Singapore live** 
 Tracking information only — not legal advice. Verify the official source before relying on it.
 
 ## License
+
+Project management: [charter](PROJECT.md), [workflow and delivery](docs/WORKFLOW.md). The deployed site's `deployment.json` records source and artifact fingerprints; content review and user acceptance remain separate.
 
 [MIT](./LICENSE)

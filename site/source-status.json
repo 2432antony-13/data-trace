@@ -1,0 +1,55 @@
+{
+  "sources": [
+    {
+      "code": "pcpd-press",
+      "name": "PCPD Hong Kong",
+      "jurisdiction": "HK",
+      "status": "failed",
+      "checkedAt": "2026-10-26T11:19:16.659Z",
+      "lastSuccessfulAt": null,
+      "inserted": 0,
+      "unchanged": 0
+    },
+    {
+      "code": "hkel-dataset",
+      "name": "Hong Kong e-Legislation (DATA.GOV.HK)",
+      "jurisdiction": "HK",
+      "status": "available",
+      "checkedAt": "2026-10-26T11:19:18.267Z",
+      "lastSuccessfulAt": "2026-10-26T11:19:18.267Z",
+      "inserted": 12,
+      "unchanged": 0
+    },
+    {
+      "code": "pdpc-news",
+      "name": "PDPC Singapore",
+      "jurisdiction": "SG",
+      "status": "failed",
+      "checkedAt": "2026-10-26T11:19:20.098Z",
+      "lastSuccessfulAt": null,
+      "inserted": 0,
+      "unchanged": 0
+    },
+    {
+      "code": "mas-consultations",
+      "name": "Monetary Authority of Singapore",
+      "jurisdiction": "SG",
+      "status": "empty",
+      "checkedAt": "2026-10-26T11:19:21.355Z",
+      "lastSuccessfulAt": null,
+      "inserted": 0,
+      "unchanged": 0
+    },
+    {
+      "code": "imda-codes",
+      "name": "IMDA Singapore",
+      "jurisdiction": "SG",
+      "status": "failed",
+      "checkedAt": "2026-10-26T11:19:21.837Z",
+      "lastSuccessfulAt": null,
+      "inserted": 0,
+      "unchanged": 0
+    }
+  ],
+  "reviewMode": "Automatic collection is not editorial approval."
+}

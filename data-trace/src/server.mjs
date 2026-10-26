@@ -5,6 +5,7 @@ import { dirname, extname, join, normalize, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { hash, openDatabase } from './db.mjs';
 import { isMailConfigured, sendEmail } from './mail/sender.mjs';
+import { getSourceStatus } from './ingest/status.mjs';
 
 const moduleDir = dirname(fileURLToPath(import.meta.url));
 const publicDir = resolve(moduleDir, '../public');
@@ -161,7 +162,7 @@ function mapRegulation(row) {
   };
 }
 
-function mapUpdate(row) {
+export function mapUpdate(row) {
   return {
     id: row.id,
     regulationId: row.regulation_id,
@@ -408,6 +409,9 @@ function createRateLimiter({ windowMs = 10 * 60 * 1000, windowMax = 3, dayMs = 2
 }
 
 function handleApi(request, response, url, db, env, limiter) {
+  if (request.method === 'GET' && url.pathname === '/api/source-status') {
+    return json(response, 200, getSourceStatus(db));
+  }
   if (request.method === 'GET' && url.pathname === '/api/health') {
     const counts = db.prepare(`SELECT
       (SELECT COUNT(*) FROM regulations) AS regulations,
@@ -481,7 +485,7 @@ function handleApi(request, response, url, db, env, limiter) {
     if (CLASSIFICATION_PATTERN.test(industry || '')) { clauses.push('EXISTS (SELECT 1 FROM json_each(updates.industries) WHERE value=?)'); values.push(industry); }
     if (CLASSIFICATION_PATTERN.test(topic || '')) { clauses.push('EXISTS (SELECT 1 FROM json_each(updates.topics) WHERE value=?)'); values.push(topic); }
     const where = `WHERE ${clauses.join(' AND ')}`;
-    const rows = db.prepare(`SELECT * FROM updates ${where} ORDER BY event_date DESC LIMIT ?`).all(...values, limit);
+    const rows = db.prepare(`SELECT * FROM updates ${where} ORDER BY event_date DESC, id LIMIT ?`).all(...values, limit);
     return json(response, 200, { data: rows.map(mapUpdate), total: rows.length });
   }
 

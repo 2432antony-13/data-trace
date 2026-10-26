@@ -1,6 +1,7 @@
 // 抓取 CLI：node src/ingest/run.mjs [--source hk|sg|hk,sg|<code>] [--dry-run] [--database <path>]
 // dry-run 只打印不写库；结束打印每源 inserted/unchanged 汇总。
 import { openDatabase } from '../db.mjs';
+import { pathToFileURL } from 'node:url';
 import { runIngest } from './pipeline.mjs';
 import { hkSources } from './sources/hk.mjs';
 import { sgSources } from './sources/sg.mjs';
@@ -82,7 +83,7 @@ async function main() {
   }
 }
 
-if (process.argv[1] && new URL(`file://${process.argv[1]}`).href === import.meta.url) {
+if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
   main().catch((error) => {
     console.error('抓取运行崩溃：', error && error.message ? error.message : error);
     process.exitCode = 1;
