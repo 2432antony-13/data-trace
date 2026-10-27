@@ -144,7 +144,7 @@ window.__DT_STATIC__ = {
     return Promise.resolve({ ok: true, status: 200, json: function () { return Promise.resolve(value); } });
   }
   function blocked() {
-    return Promise.resolve({ ok: false, status: 403, json: function () { return Promise.resolve({ error: S.demoNotice }); } });
+    return Promise.resolve({ ok: false, status: 403, json: function () { return Promise.resolve({ error: (typeof document !== 'undefined' && document.documentElement.lang === 'en') ? 'Static demo: browsing, filtering and search are available. Subscriptions and email require the full service.' : (typeof document !== 'undefined' && document.documentElement.lang === 'zh-TW') ? '靜態示範版：瀏覽、篩選與搜尋可用；訂閱與郵件需部署完整服務。' : S.demoNotice }); } });
   }
   function queryParams(url) {
     var out = {};
@@ -209,7 +209,7 @@ console.log('[demo-build] 筛选校验 13 组全部一致');
 console.log('[demo-build] 改造 app.js 路由…');
 let appJs = readFileSync(join(dataTraceDir, 'public/app.js'), 'utf8').replace(/\r\n/g, '\n');
 const patches = [
-  ['const DEFAULT_TITLE = document.title;', 'const BASE_PATH = ' + JSON.stringify(BASE_PATH) + ';\nconst DEFAULT_TITLE = document.title;'],
+  ['function pageTitle()', 'const BASE_PATH = ' + JSON.stringify(BASE_PATH) + ';\nfunction pageTitle()'],
   ["const DETAIL_PREFIX = '/regulations/';", "const DETAIL_PREFIX = BASE_PATH + '/regulations/';"],
   ["const LEGACY_PATHS = { home: '/', library: '/library', timeline: '/timeline', subscribe: '/subscribe' };",
     "const LEGACY_PATHS = { home: BASE_PATH + '/', library: BASE_PATH + '/library', timeline: BASE_PATH + '/timeline', subscribe: BASE_PATH + '/subscribe' };"],
@@ -235,6 +235,7 @@ console.log('[demo-build] 改造 index.html…');
 let html = readFileSync(join(dataTraceDir, 'public/index.html'), 'utf8');
 html = html.replace('<link rel="stylesheet" href="/styles.css">', '<link rel="stylesheet" href="styles.css">');
 html = html.replace('<script type="module" src="/app.js"></script>', '<script src="static-data.js"></script>\n  <script type="module" src="app.js"></script>');
+html = html.replaceAll('src="/tony.svg"', 'src="' + BASE_PATH + '/tony.svg"');
 html = html.split('href="/').join('href="' + BASE_PATH + '/');   // 内部链接统一子路径前缀
 html = html.split('https://datatrace.example').join(PAGES_URL);  // canonical/og 指向 Pages 地址
 html = html.split(BASE_PATH + '//').join(BASE_PATH + '/');                 // 修正 canonical 尾部双斜杠
@@ -246,6 +247,7 @@ writeFileSync(join(outDir, '404.html'), notFound);
 
 // ---------- 静态资源 ----------
 copyFileSync(join(dataTraceDir, 'public/styles.css'), join(outDir, 'styles.css'));
+copyFileSync(join(dataTraceDir, 'public/tony.svg'), join(outDir, 'tony.svg'));
 writeFileSync(join(outDir, 'static-data.js'), staticJs);
 writeFileSync(statusPath, JSON.stringify(sourceStatus, null, 2) + '\n');
 writeFileSync(join(outDir, '.nojekyll'), '');

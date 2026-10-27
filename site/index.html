@@ -12,24 +12,25 @@
   <meta property="og:url" content="https://2432antony-13.github.io/data-trace/">
   <meta property="og:locale" content="en_US">
   <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="/data-trace/tony.svg">
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip.link">Skip to main content</a>
   <div id="global-banner" class="global-banner" role="status" hidden></div>
   <div class="noise" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="/data-trace/" aria-label="DataTrace home">
-      <span class="brand-mark">DT</span>
-      <span>DATA TRACE<small>GLOBAL COMPLIANCE SIGNAL</small></span>
+    <a class="brand" href="/data-trace/" aria-label="DataTrace home" data-i18n-aria="brand.home">
+      <img class="tony-mark" src="/data-trace/tony.svg" alt="Tony 24" width="42" height="42">
+      <span>DATA TRACE<small data-i18n="brand.tagline">GLOBAL COMPLIANCE SIGNAL</small></span>
     </a>
-    <nav aria-label="Primary navigation">
+    <nav aria-label="Primary navigation" data-i18n-aria="nav.label">
       <a href="/data-trace/" data-nav="home" data-i18n="nav.home">Radar</a>
       <a href="/data-trace/library" data-nav="library" data-i18n="nav.library">Library</a>
       <a href="/data-trace/timeline" data-nav="timeline" data-i18n="nav.timeline">Timeline</a>
       <a class="nav-cta" href="/data-trace/subscribe" data-nav="subscribe" data-i18n="nav.subscribe">Subscribe ↗</a>
     </nav>
-    <button id="language-toggle" class="language-toggle" type="button" aria-label="切换到中文">中文</button>
-    <button class="menu-button" aria-label="Open navigation" aria-expanded="false">MENU</button>
+    <select id="language-toggle" class="language-toggle" aria-label="Language"><option value="zh">简体中文</option><option value="zh-TW">繁體中文</option><option value="en">English</option></select>
+    <button class="menu-button" aria-label="Open navigation" data-i18n-aria="menu.open" aria-expanded="false" data-i18n="menu.label">MENU</button>
   </header>
 
   <main id="main" tabindex="-1">
@@ -37,7 +38,7 @@
     <section id="home" class="view active" data-view="home">
       <div class="hero">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="pulse"></span> LIVE REGULATORY INTELLIGENCE · HK / SG</div>
+          <div class="eyebrow"><span class="pulse"></span> <span data-i18n="hero.eyebrow">LIVE REGULATORY INTELLIGENCE · HK / SG</span></div>
           <h1 data-i18n="hero.title">Trace every<br><em>regulatory shift</em><br>to its source.</h1>
           <p data-i18n="hero.body">Regulatory intelligence for cross-border legal and privacy teams—connecting primary sources, obligations, amendments and delivery in one auditable data chain.</p>
           <div class="hero-actions">
@@ -46,7 +47,7 @@
           </div>
         </div>
         <div class="radar-card reveal delay-1" data-i18n-aria="radar.label">
-          <div class="radar-head"><span>REGULATORY RADAR</span><span class="live">LIVE</span></div>
+          <div class="radar-head"><span data-i18n="radar.title">REGULATORY RADAR</span><span class="live" data-i18n="radar.live">LIVE</span></div>
           <div class="radar-visual">
             <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
             <div class="scan"></div>
@@ -61,8 +62,8 @@
         </div>
       </div>
 
-      <div class="ticker" aria-label="产品特性">
-        <div>AUTHORITATIVE SOURCES <i>✦</i> PROVENANCE BY DEFAULT <i>✦</i> IDEMPOTENT UPDATES <i>✦</i> HK + SINGAPORE PILOT <i>✦</i> AUTHORITATIVE SOURCES <i>✦</i> PROVENANCE BY DEFAULT <i>✦</i></div>
+      <div class="ticker" aria-label="产品特性" data-i18n-aria="features.label">
+        <div data-i18n="ticker.text">AUTHORITATIVE SOURCES · PROVENANCE BY DEFAULT · IDEMPOTENT UPDATES · HK + SINGAPORE PILOT</div>
       </div>
 
       <div class="home-grid">
@@ -78,11 +79,11 @@
           <h2 data-i18n="coverage.title">Jurisdiction coverage</h2>
           <button class="territory-card" data-jurisdiction-jump="HK">
             <span class="territory-code">HK</span>
-            <span><b data-i18n="coverage.hk">Hong Kong</b><small>PDPO · finance · telecoms</small></span><i>↗</i>
+            <span><b data-i18n="coverage.hk">Hong Kong</b><small data-i18n="coverage.hkDetail">PDPO · finance · telecoms</small></span><i>↗</i>
           </button>
           <button class="territory-card dark" data-jurisdiction-jump="SG">
             <span class="territory-code">SG</span>
-            <span><b data-i18n="coverage.sg">Singapore</b><small>PDPA · finance · telecoms</small></span><i>↗</i>
+            <span><b data-i18n="coverage.sg">Singapore</b><small data-i18n="coverage.sgDetail">PDPA · finance · telecoms</small></span><i>↗</i>
           </button>
           <div class="source-note"><span>✓</span><p data-i18n="coverage.source"><b>Source-verifiable</b><br>Every record retains its authority, primary link, version date and content fingerprint.</p></div>
         </aside>
@@ -91,17 +92,17 @@
 
     <section id="library" class="view" data-view="library">
       <header class="page-header">
-        <div><span class="eyebrow">STRUCTURED REGULATION LIBRARY</span><h1 data-i18n="library.title">Regulation is more than a PDF.</h1></div>
+        <div><span data-i18n="library.eyebrow" class="eyebrow">STRUCTURED REGULATION LIBRARY</span><h1 data-i18n="library.title">Regulation is more than a PDF.</h1></div>
         <p data-i18n="library.body">Filter by jurisdiction, industry and topic; open any record for structured obligations, version data and the authoritative source.</p>
       </header>
       <div class="filter-bar">
         <label class="search-box"><span>⌕</span><input id="reg-search" type="search" placeholder="Search rules, duties or authorities" data-i18n-placeholder="library.search" autocomplete="off"></label>
-        <div class="filter-group" aria-label="Jurisdiction filter">
+        <div class="filter-group" aria-label="Jurisdiction filter" data-i18n-aria="filter.jurisdiction">
           <button class="chip active" data-jurisdiction="" data-i18n="filter.all">All</button><span id="library-jurisdiction-chips" class="jurisdiction-chips"></span>
         </div>
-        <select id="industry-filter" aria-label="Industry filter"><option value="" data-i18n="filter.allIndustries">All industries</option></select>
-        <select id="topic-filter" aria-label="Topic filter"><option value="" data-i18n="filter.allTopics">All topics</option></select>
-        <select id="type-filter" aria-label="Instrument type">
+        <select id="industry-filter" aria-label="Industry filter" data-i18n-aria="filter.industry"><option value="" data-i18n="filter.allIndustries">All industries</option></select>
+        <select id="topic-filter" aria-label="Topic filter" data-i18n-aria="filter.topic"><option value="" data-i18n="filter.allTopics">All topics</option></select>
+        <select id="type-filter" aria-label="Instrument type" data-i18n-aria="filter.type">
           <option value="" data-i18n="filter.allTypes">All instrument types</option><option value="legislation" data-i18n="type.legislation">Primary legislation</option><option value="subsidiary_legislation" data-i18n="type.subsidiary_legislation">Subsidiary legislation</option><option value="regulator_guidance" data-i18n="type.regulator_guidance">Regulatory guidance</option><option value="code_of_practice" data-i18n="type.code_of_practice">Code of practice</option>
         </select>
       </div>
@@ -111,8 +112,8 @@
 
     <section id="timeline" class="view" data-view="timeline">
       <header class="page-header timeline-header">
-        <div><span class="eyebrow">AMENDMENT / COMMENCEMENT / GUIDANCE</span><h1 data-i18n="timeline.title">Regulatory change timeline</h1></div>
-        <div class="filter-group" aria-label="Timeline jurisdiction filter">
+        <div><span data-i18n="timeline.eyebrow" class="eyebrow">AMENDMENT / COMMENCEMENT / GUIDANCE</span><h1 data-i18n="timeline.title">Regulatory change timeline</h1></div>
+        <div class="filter-group" aria-label="Timeline jurisdiction filter" data-i18n-aria="filter.timeline">
           <button class="chip active" data-timeline-jurisdiction="" data-i18n="filter.all">All</button><span id="timeline-jurisdiction-chips" class="jurisdiction-chips"></span>
         </div>
       </header>
@@ -128,12 +129,12 @@
     <section id="subscribe" class="view" data-view="subscribe">
       <div class="subscribe-layout">
         <div class="subscribe-copy">
-          <span class="eyebrow">SIGNAL DELIVERY</span>
+          <span data-i18n="subscribe.eyebrow" class="eyebrow">SIGNAL DELIVERY</span>
           <h1 data-i18n="subscribe.title">Do not leave change<br>inside the browser.</h1>
           <p data-i18n="subscribe.body">Choose a fixed jurisdiction plan and delivery mode. Daily briefings run at 08:00 Beijing time; high-impact alerts are prepared immediately.</p>
           <div class="briefing-preview">
-            <div class="mail-window-head"><span></span><span></span><span></span><b>DAILY BRIEFING / PREVIEW</b></div>
-            <div id="briefing-preview-body">Generating the latest briefing preview…</div>
+            <div class="mail-window-head"><span></span><span></span><span></span><b data-i18n="briefing.preview">DAILY BRIEFING / PREVIEW</b></div>
+            <div data-i18n="briefing.loading" id="briefing-preview-body">Generating the latest briefing preview…</div>
           </div>
         </div>
         <form id="subscription-form" class="subscription-card" novalidate>
@@ -159,15 +160,15 @@
   </main>
 
   <footer>
-    <div class="brand"><span class="brand-mark">DT</span><span>DATA TRACE<small>TRACE CHANGE. PROVE SOURCE.</small></span></div>
+    <div class="brand"><img class="tony-mark" src="/data-trace/tony.svg" alt="Tony 24" width="42" height="42"><span>DATA TRACE<small data-i18n="footer.tagline">TRACE CHANGE. PROVE SOURCE.</small></span></div>
     <p data-i18n="footer.note">Hong Kong + Singapore pilot · source check 2026-08-09<br>Tracking information only; not legal advice.</p>
-    <a href="/data-trace/">BACK TO TOP ↑</a>
+    <a href="/data-trace/" data-i18n="back.top">BACK TO TOP ↑</a>
   </footer>
 
   <div id="detail-overlay" class="detail-overlay" hidden>
-    <button class="overlay-backdrop" aria-label="Close details"></button>
+    <button class="overlay-backdrop" aria-label="Close details" data-i18n-aria="detail.close"></button>
     <aside class="detail-drawer" role="dialog" aria-modal="true" aria-labelledby="detail-title">
-      <button id="detail-close" class="detail-close" aria-label="Close">×</button>
+      <button id="detail-close" class="detail-close" aria-label="Close" data-i18n-aria="detail.close">×</button>
       <div id="detail-content"></div>
     </aside>
   </div>
