@@ -1,6 +1,6 @@
 # DataTrace 工作与交付流程
 
-一项任务先写用户问题、范围、可核对验收与前置条件，再进入实施。采用 Backlog → Ready → Doing → Review → Verified → Delivered；阻塞单列，取消不计交付。Projects 接入前由 Issue 的任务记录承载状态，接入后以 Projects 为状态源。
+一项任务先写用户问题、范围、可核对验收与前置条件，再进入实施。采用 Backlog → Ready → Doing → Review → Verified → Delivered；阻塞单列，取消不计交付。任务状态统一在[私有管理看板](https://github.com/users/2432antony-13/projects/1)的 Status 字段维护，阻塞使用 Blocked / Blocker 字段；Issue 正文保留验收与解除条件。旧 status/blocked 标签停止作为状态源。
 
 小修复可用一个 Issue 与一个 PR 承载；重要数据/产品变动补一份决策记录。默认 `main` 加短任务分支。PR 写清行为变化、实际命令、结果和未覆盖范围，检查通过后才集成；单人自查不伪装成独立审批。
 
@@ -18,7 +18,7 @@ npm run build:demo
 
 ## 渠道
 
-2026-10-26 实施状态：以下增强工作流已在本地准备，待账号取得 `workflow` 权限后推送。首轮试点使用现有 Pages 流程发布已提交的 `site/`，以部署运行的 SHA 与线上文件散列核对来源；该阶段没有 `deployment.json`。Projects 看板另待 `project` 权限。不要将这些待接入能力写成已完成。
+2026-10-27：project/workflow 权限已补齐。本轮变更将以下增强流程接入 Actions；精确运行、来源提交和线上制品核对登记到 Issue #3。2026-10-26 的首轮静态交付没有 deployment.json，历史证据保留。
 
 - main 代码变更：Pages workflow 检查、构建、记录制品指纹并部署。
 - 每日数据变更：采集并保留各源状态，演示自动收录，构建与提交后显式调用 Pages workflow。机器人 push 本身不是触发保证。
@@ -35,4 +35,8 @@ GitHub 的复用工作流与 Pages 权限规则参考：[复用工作流](https:
 
 ## 2026-10-27 全仓治理接入
 
-本轮沿用既有试点规则，补充治理基线、质量矩阵、资产和交接。入口见 [治理基线](governance/BASELINE.md)。当前任务在 Projects 接入前使用唯一 `status:` 标签，阻塞单列 `blocked`。仅现有 GitHub 仓库在范围内，暂不新建仓库或引入本地项目。全仓治理文档交付不替代来源修复、自动化和浏览器验收。
+本轮沿用既有试点规则，补充治理基线、质量矩阵、资产和交接。入口见 [治理基线](governance/BASELINE.md)。任务状态统一在[私有管理看板](https://github.com/users/2432antony-13/projects/1)的 Status 字段维护，阻塞使用 Blocked / Blocker 字段；Issue 正文保留验收与解除条件。旧 status/blocked 标签停止作为状态源。仅现有 GitHub 仓库在范围内，暂不新建仓库或引入本地项目。全仓治理文档交付不替代来源修复、自动化和浏览器验收。
+
+## 新任务进入看板
+
+[私有管理看板](https://github.com/users/2432antony-13/projects/1)是当前状态源。网页任务表单设置了项目关联和默认 Owner；创建者有看板写权限时可自动加入。CLI/API 或外部贡献者创建的 Issue 由 Owner 显式加入看板，并核对 Status、Blocked、Assignees；新任务通常为 Backlog，期限未知保持空。参考 [GitHub 表单规则](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms)。

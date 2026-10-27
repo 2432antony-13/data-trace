@@ -5,13 +5,19 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 defaults:
   run:
     working-directory: data-trace
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,3 +25,4 @@ jobs:
           node-version: 22
       # 项目零第三方依赖，无需 npm ci；check 做语法检查，test 跑 node --test。
       - run: npm run check && npm test
+      - run: npm run build:demo
