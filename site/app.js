@@ -28,7 +28,7 @@ const messages = {
     'subscribe.saved': '✓ Subscription preferences saved.',
     'subscribe.confirm': '✓ Subscription saved. Check your inbox and click the confirmation link to activate delivery.',
     'subscribe.pendingConfirm': 'Subscription pending confirmation — check your inbox and click the confirmation link to activate delivery.',
-    'footer.note': 'Hong Kong + Singapore pilot · source check 2026-08-09<br>Tracking information only; not legal advice.',
+    'footer.note': 'Hong Kong + Singapore pilot · seed content checked 2026-08-09; collection status shown above<br>Tracking information only; not legal advice.',
     'radar.label': 'Regulatory coverage radar', 'skip.link': 'Skip to main content', 'retry': 'Retry',
     'offline.title': 'You are offline or the server is unreachable. Some data may be stale.'
   },
@@ -51,7 +51,7 @@ const messages = {
     'subscribe.saved': '✓ 订阅设置已持久保存。',
     'subscribe.confirm': '✓ 订阅已持久保存，请查收确认邮件完成激活（未确认不发送简报）。',
     'subscribe.pendingConfirm': '订阅尚未激活：请查收确认邮件并点击确认链接完成激活（未确认不发送简报）。',
-    'footer.note': '香港 + 新加坡试点 · 来源核验于 2026-08-09<br>信息仅用于法规追踪，不构成法律意见。',
+    'footer.note': '香港 + 新加坡试点 · 种子内容核验基线 2026-08-09；采集状态见上方<br>信息仅用于法规追踪，不构成法律意见。',
     'radar.label': '覆盖情况', 'skip.link': '跳到主要内容', 'retry': '重试',
     'offline.title': '网络不可用或服务器无响应，部分数据可能已过期。'
   }

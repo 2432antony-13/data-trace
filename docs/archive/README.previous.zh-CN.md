@@ -4,7 +4,7 @@
 
 DataTrace 是面向跨境隐私与合规团队的开源法规情报平台。首发香港 + 新加坡，架构上支持扩展到任意法域——每条记录都保留发布机关、官方原文链接、版本日期与内容指纹。
 
-**[English](./README.md) · 简体中文**
+**[English](../../README.md) · 简体中文**
 
 ---
 
@@ -38,7 +38,7 @@ npm test           # 自动化测试
 
 ## 部署
 
-- **Docker Compose + Caddy**（自动 HTTPS）——详见 [data-trace/deploy/README.md](data-trace/deploy/README.md)
+- **Docker Compose + Caddy**（自动 HTTPS）——详见 [data-trace/deploy/README.md](../../data-trace/deploy/README.md)
 - 每日 08:00 简报：服务器 crontab 或 GitHub Actions（`.github/workflows/daily-dispatch.yml`）
 - 发信：任意 Resend/Postmark 风格网关（`MAIL_API_URL` / `MAIL_API_KEY` / `MAIL_FROM`），可适配 AWS SES 或阿里云邮件推送
 
@@ -61,4 +61,4 @@ npm test           # 自动化测试
 
 ## 许可证
 
-[MIT](./LICENSE)
+[MIT](../../LICENSE)

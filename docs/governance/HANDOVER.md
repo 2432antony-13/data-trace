@@ -17,3 +17,10 @@
 - [governance #7](https://github.com/2432antony-13/data-trace/issues/7)
 
 任务当前状态以[私有管理看板](https://github.com/users/2432antony-13/projects/1)的 Status 与 Blocked 为准；最终 PR、合并来源与运行结果在治理任务正文登记。这里不复制会随进度变化的第二套任务状态。
+
+## 2026-10-27 首页整理与三语入口
+
+- 本轮首页任务：https://github.com/2432antony-13/data-trace/issues/10。
+- README 顶部提供简体中文、繁体中文和 English；完整说明收进 docs/，旧版本在 docs/archive/ 保留。
+- 三语覆盖当前仓库首页与核心使用说明；产品界面与专业内容尚未完成全量三语化，不能据此标为已完成。
+- 页脚改为种子内容核验基线，不冒充最新采集或内容复核日期。Node 22 本地 17 项测试和 13 组静态筛选比较通过。
