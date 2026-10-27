@@ -1,8 +1,23 @@
+// Only built-in display text passes through ui(); user input and source records are unchanged.
+const traditionalCharacters = {"与": "與", "专": "專", "业": "業", "丢": "丟", "个": "個", "为": "為", "义": "義", "书": "書", "于": "於", "仅": "僅", "从": "從", "优": "優", "传": "傳", "体": "體", "关": "關", "内": "內", "况": "況", "减": "減", "击": "擊", "则": "則", "别": "別", "务": "務", "动": "動", "历": "歷", "双": "雙", "发": "發", "变": "變", "台": "臺", "号": "號", "后": "後", "响": "響", "图": "圖", "实": "實", "审": "審", "对": "對", "层": "層", "屉": "屜", "属": "屬", "师": "師", "并": "並", "库": "庫", "应": "應", "开": "開", "弃": "棄", "当": "當", "录": "錄", "径": "徑", "态": "態", "户": "戶", "报": "報", "拢": "攏", "择": "擇", "换": "換", "据": "據", "数": "數", "无": "無", "旧": "舊", "时": "時", "显": "顯", "暂": "暫", "机": "機", "权": "權", "条": "條", "来": "來", "构": "構", "档": "檔", "检": "檢", "残": "殘", "没": "沒", "泄": "洩", "浏": "瀏", "点": "點", "状": "狀", "电": "電", "监": "監", "盖": "蓋", "确": "確", "种": "種", "筛": "篩", "简": "簡", "类": "類", "级": "級", "纹": "紋", "线": "線", "组": "組", "终": "終", "绑": "綁", "结": "結", "络": "絡", "继": "繼", "续": "續", "网": "網", "营": "營", "补": "補", "见": "見", "规": "規", "视": "視", "览": "覽", "触": "觸", "计": "計", "订": "訂", "认": "認", "让": "讓", "记": "記", "设": "設", "证": "證", "词": "詞", "试": "試", "询": "詢", "该": "該", "详": "詳", "误": "誤", "请": "請", "读": "讀", "败": "敗", "踪": "蹤", "轨": "軌", "轮": "輪", "载": "載", "输": "輸", "达": "達", "过": "過", "进": "進", "迹": "跡", "选": "選", "邮": "郵", "采": "採", "里": "裡", "银": "銀", "链": "鏈", "销": "銷", "错": "錯", "键": "鍵", "间": "間", "阅": "閱", "险": "險", "静": "靜", "页": "頁", "项": "項", "颁": "頒", "预": "預", "题": "題", "风": "風", "验": "驗"};
+const traditionalPhrases = {"已通过专属链接载入订阅。": "已透過專屬連結載入訂閱。", "尚无检查记录": "尚無檢查記錄", "结构化义务": "結構化義務", "订阅已取消。": "訂閱已取消。", "发布机关": "釋出機關", "查看原文": "檢視原文", "版本": "版本", "当前按文书级追踪，条文拆分待补。": "當前按文書級追蹤，條文拆分待補。", "最近检查": "最近檢查", "历史记录可继续浏览；来源检查成功不代表内容已完成人工审校。自动收录内容请核对官方原文。": "歷史記錄可繼續瀏覽；來源檢查成功不代表內容已完成人工審校。自動收錄內容請核對官方原文。", "已载入订阅，请点击下方“取消订阅”确认。": "已載入訂閱，請點選下方“取消訂閱”確認。", "来源核验": "來源核驗", "未匹配到条目，待核验": "未匹配到條目，待核驗", "当前版本": "當前版本", "来源与数据时效": "來源與資料時效", "前往": "前往", "最近成功采集": "最近成功採集", "打开记录": "開啟記錄", "来源不可用": "來源不可用", "采集可用": "採集可用", "该法域暂无更新记录。": "該法域暫無更新記錄。", "生效日期": "生效日期", "请减少关键词或切换分类筛选。": "請減少關鍵詞或切換分類篩選。", "来源状态暂不可读取，当前数据时效未确认。": "來源狀態暫不可讀取，當前資料時效未確認。", "正在保存…": "正在儲存…", "未确认": "未確認", "请求失败，请稍后重试。": "請求失敗，請稍後重試。", "没有匹配记录": "沒有匹配記錄", "检查中": "檢查中"};
+function traditional(text) { if (traditionalPhrases[text]) return traditionalPhrases[text]; return Array.from(text, c => traditionalCharacters[c] || c).join(''); }
+function ui(text) { return state.language === 'zh-TW' ? traditional(text) : text; }
+function uiTemplate(parts, ...values) { return parts.map((part, i) => ui(part) + (values[i] ?? '')).join(''); }
+function readLanguage() {
+  let stored; try { stored = localStorage.getItem('dataTraceLanguage'); } catch { /* Session preference only. */ }
+  for (const value of [new URLSearchParams(location.search).get('lang'), stored]) {
+    if (value === 'zh' || value === 'zh-CN') return 'zh';
+    if (value === 'zh-TW' || value === 'en') return value;
+  }
+  return /^zh-(tw|hk|mo|hant)/i.test(navigator.language) ? 'zh-TW' : /^zh/i.test(navigator.language) ? 'zh' : 'en';
+}
+function readSubscriber() { try { return JSON.parse(localStorage.getItem('dataTraceSubscriber') || 'null'); } catch { return null; } }
 const state = {
   regulations: [], updates: [], timelineUpdates: [], jurisdiction: '', industry: '', topic: '', type: '', query: '', timelineJurisdiction: '',
   jurisdictions: [], subscriptionJurisdictions: [],
-  language: localStorage.getItem('dataTraceLanguage') || 'en',
-  subscriber: JSON.parse(localStorage.getItem('dataTraceSubscriber') || 'null')
+  language: readLanguage(),
+  subscriber: readSubscriber()
 };
 
 const messages = {
@@ -70,8 +85,17 @@ const taxonomyLabels = {
   collection: ['Collection', '收集'], consent: ['Consent', '同意'], data_subject_rights: ['Data subject rights', '数据主体权利'], security: ['Security', '安全'], retention: ['Retention', '留存'], direct_marketing: ['Direct marketing', '直销'], breach_notification: ['Breach notification', '泄露通知'], incident_response: ['Incident response', '事件响应'], cross_border_transfer: ['Cross-border transfer', '跨境传输'], cybersecurity: ['Cybersecurity', '网络安全'], technology_risk: ['Technology risk', '科技风险'], outsourcing: ['Outsourcing', '外包'], customer_confidentiality: ['Customer confidentiality', '客户信息保密'], communications_data: ['Communications data', '通信数据'], electronic_marketing: ['Electronic marketing', '电子营销'], network_security: ['Network security', '网络安全']
 };
 
+
+Object.assign(messages.en, {"language.label": "Language", "menu.open": "Open navigation", "menu.label": "Menu", "nav.label": "Primary navigation", "detail.close": "Close", "back.top": "Back to top ↑", "radar.title": "REGULATORY RADAR", "radar.live": "LIVE", "hero.eyebrow": "LIVE REGULATORY INTELLIGENCE · HK / SG", "brand.tagline": "GLOBAL COMPLIANCE SIGNAL"});
+Object.assign(messages.zh, {"language.label": "语言", "menu.open": "打开导航", "menu.label": "菜单", "nav.label": "主要导航", "detail.close": "关闭", "back.top": "返回顶部 ↑", "radar.title": "法规雷达", "radar.live": "实时", "hero.eyebrow": "法规动态 · 香港 / 新加坡", "brand.tagline": "全球合规信号"});
+Object.assign(messages.en, {"coverage.hkDetail": "PDPO · finance · telecoms", "coverage.sgDetail": "PDPA · finance · telecoms", "library.eyebrow": "STRUCTURED REGULATION LIBRARY", "timeline.eyebrow": "AMENDMENT / COMMENCEMENT / GUIDANCE", "subscribe.eyebrow": "SIGNAL DELIVERY", "briefing.preview": "DAILY BRIEFING / PREVIEW", "briefing.loading": "Generating the latest briefing preview…", "footer.tagline": "TRACE CHANGE. PROVE SOURCE.", "features.label": "Product features", "brand.home": "DataTrace home", "filter.jurisdiction": "Jurisdiction filter", "filter.industry": "Industry filter", "filter.topic": "Topic filter", "filter.type": "Instrument type", "filter.timeline": "Timeline jurisdiction filter", "detail.close": "Close details", "feature.0": "AUTHORITATIVE SOURCES", "feature.1": "STRUCTURED OBLIGATIONS", "feature.2": "VERSION FINGERPRINTS", "feature.3": "AMENDMENT TIMELINE", "feature.4": "DAILY BRIEFINGS", "feature.5": "REAL-TIME ALERTS"});
+Object.assign(messages.zh, {"coverage.hkDetail": "PDPO · 金融 · 电信", "coverage.sgDetail": "PDPA · 金融 · 电信", "library.eyebrow": "结构化法规库", "timeline.eyebrow": "修订 / 生效 / 指引", "subscribe.eyebrow": "信号触达", "briefing.preview": "每日简报 / 预览", "briefing.loading": "正在生成最新简报预览…", "footer.tagline": "追踪变化，核验来源。", "features.label": "产品特性", "brand.home": "DataTrace 首页", "filter.jurisdiction": "法域筛选", "filter.industry": "行业筛选", "filter.topic": "主题筛选", "filter.type": "文书类型", "filter.timeline": "更新线法域筛选", "detail.close": "关闭", "feature.0": "权威来源", "feature.1": "结构化义务", "feature.2": "版本指纹", "feature.3": "修订时间线", "feature.4": "每日简报", "feature.5": "即时提醒"});
+messages.en['ticker.text'] = 'AUTHORITATIVE SOURCES ✦ PROVENANCE BY DEFAULT ✦ IDEMPOTENT UPDATES ✦ HK + SINGAPORE PILOT';
+messages.zh['ticker.text'] = '权威来源 ✦ 保留来源依据 ✦ 幂等更新 ✦ 香港与新加坡试点';
+for (const table of [messages, typeLabels, eventLabels]) table['zh-TW'] = Object.fromEntries(Object.entries(table.zh).map(([key, value]) => [key, traditional(value)]));
+
 function t(key) { return messages[state.language][key] || key; }
-function label(value) { const pair = taxonomyLabels[value]; return pair ? pair[state.language === 'en' ? 0 : 1] : value.replaceAll('_', ' '); }
+function label(value) { const pair = taxonomyLabels[value]; return pair ? ui(pair[state.language === 'en' ? 0 : 1]) : value.replaceAll('_', ' '); }
 function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]); }
 
 // 法域静态降级数据（/api/jurisdictions 失败时使用），保证 HK/SG 始终可用。
@@ -93,12 +117,12 @@ function activeJurisdictionCodes() {
 async function api(path, options) {
   const response = await fetch(path, options);
   const payload = await response.json();
-  if (!response.ok) throw new Error(payload.error || (state.language === 'en' ? 'Request failed. Please try again.' : '请求失败，请稍后重试。'));
+  if (!response.ok) throw new Error(payload.error || (state.language === 'en' ? 'Request failed. Please try again.' : ui('请求失败，请稍后重试。')));
   return payload;
 }
 
 // ---- 路由常量与状态 ----
-const DEFAULT_TITLE = document.title;
+function pageTitle() { return state.language === 'en' ? 'DataTrace · Regulatory intelligence' : state.language === 'zh-TW' ? 'DataTrace · 法規動態' : 'DataTrace · 法规动态'; }
 const DETAIL_PREFIX = '/regulations/';
 const LEGACY_PATHS = { home: '/', library: '/library', timeline: '/timeline', subscribe: '/subscribe' };
 let initialized = false;
@@ -106,13 +130,14 @@ let currentViewUrl = '/';
 let detailContext = null; // { id, previousUrl, previousTitle, trigger }
 
 function applyTranslations() {
-  document.documentElement.lang = state.language === 'en' ? 'en' : 'zh-CN';
+  document.documentElement.lang = state.language === 'zh' ? 'zh-CN' : state.language;
+  document.title = state.language === 'en' ? 'DataTrace · Regulatory intelligence' : state.language === 'zh-TW' ? 'DataTrace · 法規動態' : 'DataTrace · 法规动态';
   document.querySelectorAll('[data-i18n]').forEach((node) => { node.innerHTML = t(node.dataset.i18n); });
   document.querySelectorAll('[data-i18n-placeholder]').forEach((node) => { node.placeholder = t(node.dataset.i18nPlaceholder); });
   document.querySelectorAll('[data-i18n-aria]').forEach((node) => { node.setAttribute('aria-label', t(node.dataset.i18nAria)); });
   const toggle = document.querySelector('#language-toggle');
-  toggle.textContent = state.language === 'en' ? '中文' : 'EN';
-  toggle.setAttribute('aria-label', state.language === 'en' ? '切换到中文' : 'Switch to English');
+  toggle.value = state.language;
+  toggle.setAttribute('aria-label', t('language.label'));
   if (state.updates.length) { renderLatest(); renderTimeline(); }
   if (state.regulations.length) renderRegulations(state.regulations.length);
   renderJurisdictionFilters();
@@ -121,7 +146,7 @@ function applyTranslations() {
 }
 
 function formatDate(value) {
-  return value ? new Intl.DateTimeFormat(state.language === 'en' ? 'en-GB' : 'zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(`${value}T00:00:00Z`)) : '—';
+  return value ? new Intl.DateTimeFormat(state.language === 'en' ? 'en-GB' : state.language === 'zh-TW' ? 'zh-TW' : 'zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(`${value}T00:00:00Z`)) : '—';
 }
 function skeletons(count = 3) { return Array.from({ length: count }, () => '<div class="skeleton"></div>').join(''); }
 function errorCard(message, retryKey) {
@@ -194,7 +219,7 @@ function route() {
     return;
   }
   hideDetailOverlay();
-  document.title = DEFAULT_TITLE;
+  document.title = pageTitle();
   const viewName = viewForPath(parsed.path);
   showView(viewName);
   currentViewUrl = location.pathname + location.search;
@@ -232,18 +257,18 @@ async function loadHealth() {
 async function loadSourceStatus() {
   const panel = document.querySelector('#source-status');
   if (!panel) return;
-  const zh = state.language === 'zh';
+  const zh = state.language !== 'en';
   const labels = zh
-    ? { available: '采集可用', failed: '来源不可用', empty: '未匹配到条目，待核验', unknown: '尚无检查记录', running: '检查中' }
+    ? { available: ui('采集可用'), failed: ui('来源不可用'), empty: ui('未匹配到条目，待核验'), unknown: ui('尚无检查记录'), running: ui('检查中') }
     : { available: 'Collection available', failed: 'Source unavailable', empty: 'No matches — verification needed', unknown: 'Not yet checked', running: 'Checking' };
-  const dateLabel = (value) => value ? new Date(value).toLocaleString(zh ? 'zh-CN' : 'en-GB') : (zh ? '未确认' : 'Unconfirmed');
+  const dateLabel = (value) => value ? new Date(value).toLocaleString(state.language === 'zh-TW' ? 'zh-TW' : zh ? 'zh-CN' : 'en-GB') : (zh ? ui('未确认') : 'Unconfirmed');
   try {
     const { sources } = await api('/api/source-status');
-    panel.innerHTML = `<h2>${zh ? '来源与数据时效' : 'Source coverage & freshness'}</h2>
-      <p>${zh ? '历史记录可继续浏览；来源检查成功不代表内容已完成人工审校。自动收录内容请核对官方原文。' : 'Historical records remain available. A successful source check is not editorial approval; verify automatically collected items against the official source.'}</p>
-      <ul>${sources.map((source) => `<li><strong>${escapeHtml(source.name)}</strong> · ${escapeHtml(labels[source.status] || labels.unknown)}<br><small>${zh ? '最近检查' : 'Last check'}: ${escapeHtml(dateLabel(source.checkedAt))} · ${zh ? '最近成功采集' : 'Last successful collection'}: ${escapeHtml(dateLabel(source.lastSuccessfulAt))}</small></li>`).join('')}</ul>`;
+    panel.innerHTML = uiTemplate`<h2>${zh ? ui('来源与数据时效') : 'Source coverage & freshness'}</h2>
+      <p>${zh ? ui('历史记录可继续浏览；来源检查成功不代表内容已完成人工审校。自动收录内容请核对官方原文。') : 'Historical records remain available. A successful source check is not editorial approval; verify automatically collected items against the official source.'}</p>
+      <ul>${sources.map((source) => uiTemplate`<li><strong>${escapeHtml(source.name)}</strong> · ${escapeHtml(labels[source.status] || labels.unknown)}<br><small>${zh ? ui('最近检查') : 'Last check'}: ${escapeHtml(dateLabel(source.checkedAt))} · ${zh ? ui('最近成功采集') : 'Last successful collection'}: ${escapeHtml(dateLabel(source.lastSuccessfulAt))}</small></li>`).join('')}</ul>`;
   } catch {
-    panel.textContent = zh ? '来源状态暂不可读取，当前数据时效未确认。' : 'Source status is unavailable; data freshness is unconfirmed.';
+    panel.textContent = zh ? ui('来源状态暂不可读取，当前数据时效未确认。') : 'Source status is unavailable; data freshness is unconfirmed.';
   }
   panel.hidden = false;
 }
@@ -328,7 +353,7 @@ function renderLatest() {
   document.querySelector('#latest-updates').innerHTML = state.updates.slice(0, 5).map((item) => `
     <article class="signal-item" data-update-regulation="${escapeHtml(item.regulationId || '')}" tabindex="0">
       <time>${escapeHtml(item.eventDate.replaceAll('-', '.'))}</time><span class="signal-tag">${escapeHtml(item.jurisdiction)}</span>
-      <div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(state.language === 'zh' ? item.summaryZh : item.summary)}</p></div><i>↗</i>
+      <div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(state.language !== 'en' ? item.summaryZh : item.summary)}</p></div><i>↗</i>
     </article>`).join('');
 }
 let timelineRequestId = 0;
@@ -347,13 +372,13 @@ async function loadTimeline() {
 }
 function renderTimeline() {
   const items = state.timelineUpdates;
-  document.querySelector('#timeline-list').innerHTML = items.map((item) => `
+  document.querySelector('#timeline-list').innerHTML = items.map((item) => uiTemplate`
     <article class="timeline-item ${escapeHtml(item.importance)}"><time class="timeline-date">${escapeHtml(item.eventDate.replaceAll('-', '.'))}</time>
       <div class="timeline-content"><div class="timeline-meta"><span>${escapeHtml(item.jurisdiction)}</span><span>${escapeHtml(eventLabels[state.language][item.eventType] || item.eventType)}</span></div>
-      <h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(state.language === 'zh' ? item.summaryZh : item.summary)}</p>
+      <h2>${escapeHtml(item.title)}</h2><p>${escapeHtml(state.language !== 'en' ? item.summaryZh : item.summary)}</p>
       <div class="keywords">${item.industries.map((value) => `<span>${escapeHtml(label(value))}</span>`).join('')}</div>
-      <a class="source-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(item.sourceName)} · ${state.language === 'en' ? 'official source' : '查看原文'} ↗</a></div>
-    </article>`).join('') || `<div class="empty-state">${state.language === 'en' ? 'No updates for this jurisdiction.' : '该法域暂无更新记录。'}</div>`;
+      <a class="source-link" href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(item.sourceName)} · ${state.language === 'en' ? 'official source' : ui('查看原文')} ↗</a></div>
+    </article>`).join('') || uiTemplate`<div class="empty-state">${state.language === 'en' ? 'No updates for this jurisdiction.' : ui('该法域暂无更新记录。')}</div>`;
 }
 function renderUpdatesError(message) {
   const card = errorCard(message, 'updates');
@@ -413,14 +438,14 @@ async function loadRegulations() {
   }
 }
 function renderRegulations(total) {
-  document.querySelector('#result-count').textContent = state.language === 'en' ? `${total} verified records` : `${total} 条已核验记录`;
-  document.querySelector('#regulation-grid').innerHTML = state.regulations.map((item, index) => `
+  document.querySelector('#result-count').textContent = state.language === 'en' ? `${total} verified records` : uiTemplate`${total} 条已核验记录`;
+  document.querySelector('#regulation-grid').innerHTML = state.regulations.map((item, index) => uiTemplate`
     <article class="reg-card ${index === 0 && !state.query && !state.type && !state.industry && !state.topic ? 'featured' : ''}" data-regulation-id="${escapeHtml(item.id)}" data-code="${escapeHtml(item.jurisdiction)}" tabindex="0">
       <div class="card-top"><span class="jurisdiction-badge">${escapeHtml(item.jurisdiction)}</span><span class="card-type">${escapeHtml(typeLabels[state.language][item.instrumentType] || item.instrumentType)}</span></div>
       <h2>${escapeHtml(item.shortTitle)}</h2><p>${escapeHtml(item.summary)}</p>
       <div class="keywords">${[...item.industries, ...item.topics.slice(0, 2)].map((value) => `<span>${escapeHtml(label(value))}</span>`).join('')}</div>
-      <div class="card-bottom"><span>${state.language === 'en' ? 'Version' : '版本'} ${escapeHtml(item.currentVersionDate || item.effectiveDate || '—')}</span><b>${state.language === 'en' ? 'Open record' : '打开记录'} ↗</b></div>
-    </article>`).join('') || `<div class="empty-state"><b>${state.language === 'en' ? 'No matching records' : '没有匹配记录'}</b><p>${state.language === 'en' ? 'Try fewer keywords or change a classification filter.' : '请减少关键词或切换分类筛选。'}</p></div>`;
+      <div class="card-bottom"><span>${state.language === 'en' ? 'Version' : ui('版本')} ${escapeHtml(item.currentVersionDate || item.effectiveDate || '—')}</span><b>${state.language === 'en' ? 'Open record' : ui('打开记录')} ↗</b></div>
+    </article>`).join('') || uiTemplate`<div class="empty-state"><b>${state.language === 'en' ? 'No matching records' : ui('没有匹配记录')}</b><p>${state.language === 'en' ? 'Try fewer keywords or change a classification filter.' : ui('请减少关键词或切换分类筛选。')}</p></div>`;
 }
 
 // ---- 详情抽屉（含 focus trap 与深链） ----
@@ -442,12 +467,12 @@ async function openRegulation(id, trigger) {
   if (location.pathname !== detailPath) history.replaceState(null, '', detailPath);
   try {
     const { data } = await api(`/api/regulations/${encodeURIComponent(id)}`);
-    content.innerHTML = `<div class="detail-kicker"><span>${escapeHtml(data.jurisdiction)}</span><span>${escapeHtml(typeLabels[state.language][data.instrumentType] || data.instrumentType)}</span><span>${escapeHtml(data.status)}</span></div>
+    content.innerHTML = uiTemplate`<div class="detail-kicker"><span>${escapeHtml(data.jurisdiction)}</span><span>${escapeHtml(typeLabels[state.language][data.instrumentType] || data.instrumentType)}</span><span>${escapeHtml(data.status)}</span></div>
       <h1 id="detail-title">${escapeHtml(data.title)}</h1><p class="detail-summary">${escapeHtml(data.summary)}</p>
       <div class="keywords">${[...data.industries, ...data.topics].map((value) => `<span>${escapeHtml(label(value))}</span>`).join('')}</div>
-      <div class="detail-facts"><div><small>${state.language === 'en' ? 'Authority' : '发布机关'}</small><b>${escapeHtml(data.issuingBody)}</b></div><div><small>${state.language === 'en' ? 'Current version' : '当前版本'}</small><b>${escapeHtml(data.currentVersionDate || '—')}</b></div><div><small>${state.language === 'en' ? 'Effective' : '生效日期'}</small><b>${escapeHtml(formatDate(data.effectiveDate))}</b></div><div><small>${state.language === 'en' ? 'Source checked' : '来源核验'}</small><b>${escapeHtml(data.sourceCheckedAt.slice(0, 10))}</b></div></div>
-      <section class="detail-section"><h2>${state.language === 'en' ? 'Structured obligations' : '结构化义务'}</h2>${data.articles.length ? data.articles.map((article) => `<article class="article"><h3><span>${escapeHtml(article.provisionNumber)}</span>${escapeHtml(article.heading)}</h3><p>${escapeHtml(article.textSummary)}</p><div class="keywords">${article.keywords.map((keyword) => `<span>${escapeHtml(label(keyword))}</span>`).join('')}</div></article>`).join('') : `<p>${state.language === 'en' ? 'Tracked at instrument level; provision decomposition is pending.' : '当前按文书级追踪，条文拆分待补。'}</p>`}</section>
-      <a class="button primary official-button" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener">${state.language === 'en' ? 'Open' : '前往'} ${escapeHtml(data.sourceName)} <span>↗</span></a>`;
+      <div class="detail-facts"><div><small>${state.language === 'en' ? 'Authority' : ui('发布机关')}</small><b>${escapeHtml(data.issuingBody)}</b></div><div><small>${state.language === 'en' ? 'Current version' : ui('当前版本')}</small><b>${escapeHtml(data.currentVersionDate || '—')}</b></div><div><small>${state.language === 'en' ? 'Effective' : ui('生效日期')}</small><b>${escapeHtml(formatDate(data.effectiveDate))}</b></div><div><small>${state.language === 'en' ? 'Source checked' : ui('来源核验')}</small><b>${escapeHtml(data.sourceCheckedAt.slice(0, 10))}</b></div></div>
+      <section class="detail-section"><h2>${state.language === 'en' ? 'Structured obligations' : ui('结构化义务')}</h2>${data.articles.length ? data.articles.map((article) => `<article class="article"><h3><span>${escapeHtml(article.provisionNumber)}</span>${escapeHtml(article.heading)}</h3><p>${escapeHtml(article.textSummary)}</p><div class="keywords">${article.keywords.map((keyword) => `<span>${escapeHtml(label(keyword))}</span>`).join('')}</div></article>`).join('') : uiTemplate`<p>${state.language === 'en' ? 'Tracked at instrument level; provision decomposition is pending.' : ui('当前按文书级追踪，条文拆分待补。')}</p>`}</section>
+      <a class="button primary official-button" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener">${state.language === 'en' ? 'Open' : ui('前往')} ${escapeHtml(data.sourceName)} <span>↗</span></a>`;
     document.title = data.title;
     syncMeta();
     document.querySelector('#detail-close').focus();
@@ -461,7 +486,7 @@ function closeDetail() {
   const ctx = detailContext;
   if (ctx) {
     if (location.pathname.startsWith(DETAIL_PREFIX)) history.replaceState(null, '', ctx.previousUrl || '/');
-    document.title = ctx.previousTitle || DEFAULT_TITLE;
+    document.title = pageTitle();
     if (ctx.trigger && document.contains(ctx.trigger) && typeof ctx.trigger.focus === 'function') ctx.trigger.focus();
   }
   detailContext = null;
@@ -521,7 +546,7 @@ async function restoreFromEmailLink(queryString) {
   try {
     const { data } = await api(`/api/subscribers/${encodeURIComponent(subscriber)}?token=${encodeURIComponent(token)}`);
     state.subscriber = { ...data, manageToken: token }; localStorage.setItem('dataTraceSubscriber', JSON.stringify(state.subscriber)); restoreSubscription();
-    feedback.className = 'feedback success'; feedback.textContent = params.get('action') === 'unsubscribe' ? (state.language === 'en' ? 'Subscription loaded. Use Unsubscribe below to confirm.' : '已载入订阅，请点击下方“取消订阅”确认。') : (state.language === 'en' ? 'Subscription loaded from your private link.' : '已通过专属链接载入订阅。');
+    feedback.className = 'feedback success'; feedback.textContent = params.get('action') === 'unsubscribe' ? (state.language === 'en' ? 'Subscription loaded. Use Unsubscribe below to confirm.' : ui('已载入订阅，请点击下方“取消订阅”确认。')) : (state.language === 'en' ? 'Subscription loaded from your private link.' : ui('已通过专属链接载入订阅。'));
   } catch (error) { feedback.className = 'feedback error'; feedback.textContent = error.message; }
 }
 function formPreferences() {
@@ -533,7 +558,7 @@ function formPreferences() {
 }
 async function submitSubscription(event) {
   event.preventDefault(); const feedback = document.querySelector('#subscription-feedback'); const button = event.currentTarget.querySelector('.submit-button');
-  feedback.className = 'feedback'; feedback.textContent = state.language === 'en' ? 'Saving…' : '正在保存…'; button.disabled = true;
+  feedback.className = 'feedback'; feedback.textContent = state.language === 'en' ? 'Saving…' : ui('正在保存…'); button.disabled = true;
   try {
     const preferences = formPreferences(); let payload; const isUpdate = Boolean(state.subscriber);
     if (!preferences.jurisdictions.length) { feedback.className = 'feedback error'; feedback.textContent = t('subscribe.selectJurisdiction'); return; }
@@ -556,7 +581,7 @@ async function unsubscribe() {
     await api(`/api/subscribers/${state.subscriber.id}`, { method: 'DELETE', headers: { 'x-manage-token': state.subscriber.manageToken } });
     localStorage.removeItem('dataTraceSubscriber'); state.subscriber = null; document.querySelector('#email').disabled = false; document.querySelector('#manage-actions').hidden = true;
     updatePendingBanner();
-    feedback.className = 'feedback success'; feedback.textContent = state.language === 'en' ? 'Subscription cancelled.' : '订阅已取消。';
+    feedback.className = 'feedback success'; feedback.textContent = state.language === 'en' ? 'Subscription cancelled.' : ui('订阅已取消。');
   } catch (error) { feedback.className = 'feedback error'; feedback.textContent = error.message; }
 }
 
@@ -574,7 +599,14 @@ let searchTimer;
 function bindEvents() {
   window.addEventListener('popstate', route);
   window.addEventListener('hashchange', route);
-  document.querySelector('#language-toggle').addEventListener('click', async () => { state.language = state.language === 'en' ? 'zh' : 'en'; localStorage.setItem('dataTraceLanguage', state.language); applyTranslations(); await Promise.allSettled([loadTaxonomy(), loadSourceStatus()]); });
+  document.querySelector('#language-toggle').addEventListener('change', async (event) => {
+    const selected = event.target.value;
+    if (!['en', 'zh', 'zh-TW'].includes(selected)) return;
+    state.language = selected;
+    try { localStorage.setItem('dataTraceLanguage', selected); } catch { /* Session-only preference. */ }
+    const url = new URL(location.href); url.searchParams.set('lang', selected === 'zh' ? 'zh-CN' : selected); history.replaceState(null, '', url);
+    applyTranslations(); await Promise.allSettled([loadTaxonomy(), loadSourceStatus()]);
+  });
   document.querySelector('.menu-button').addEventListener('click', (event) => { const nav = document.querySelector('.topbar nav'); nav.classList.toggle('open'); event.currentTarget.setAttribute('aria-expanded', String(nav.classList.contains('open'))); });
   document.querySelector('#reg-search').addEventListener('input', (event) => { clearTimeout(searchTimer); searchTimer = setTimeout(() => { state.query = event.target.value.trim(); syncLibraryUrl(); loadRegulations(); }, 220); });
   for (const key of ['industry', 'topic', 'type']) document.querySelector(`#${key}-filter`).addEventListener('change', (event) => { state[key] = event.target.value; syncLibraryUrl(); loadRegulations(); });
