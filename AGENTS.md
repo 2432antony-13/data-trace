@@ -12,4 +12,4 @@
 
 ## 2026-10-27 全仓治理接入
 
-本轮沿用既有试点规则，补充治理基线、质量矩阵、资产和交接。入口见 [治理基线](docs/governance/BASELINE.md)。当前任务在 Projects 接入前使用唯一 `status:` 标签，阻塞单列 `blocked`。仅现有 GitHub 仓库在范围内，暂不新建仓库或引入本地项目。全仓治理文档交付不替代来源修复、自动化和浏览器验收。
+本轮沿用既有试点规则，补充治理基线、质量矩阵、资产和交接。入口见 [治理基线](docs/governance/BASELINE.md)。任务状态统一在[私有管理看板](https://github.com/users/2432antony-13/projects/1)的 Status 字段维护，阻塞使用 Blocked / Blocker 字段；Issue 正文保留验收与解除条件。旧 status/blocked 标签停止作为状态源。仅现有 GitHub 仓库在范围内，暂不新建仓库或引入本地项目。全仓治理文档交付不替代来源修复、自动化和浏览器验收。
