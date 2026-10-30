@@ -5,7 +5,7 @@
       "name": "PCPD Hong Kong",
       "jurisdiction": "HK",
       "status": "failed",
-      "checkedAt": "2026-10-29T07:50:31.175Z",
+      "checkedAt": "2026-10-30T07:54:29.648Z",
       "lastSuccessfulAt": null,
       "inserted": 0,
       "unchanged": 0
@@ -15,8 +15,8 @@
       "name": "Hong Kong e-Legislation (DATA.GOV.HK)",
       "jurisdiction": "HK",
       "status": "available",
-      "checkedAt": "2026-10-29T07:50:31.962Z",
-      "lastSuccessfulAt": "2026-10-29T07:50:31.962Z",
+      "checkedAt": "2026-10-30T07:54:30.536Z",
+      "lastSuccessfulAt": "2026-10-30T07:54:30.536Z",
       "inserted": 12,
       "unchanged": 0
     },
@@ -25,7 +25,7 @@
       "name": "PDPC Singapore",
       "jurisdiction": "SG",
       "status": "failed",
-      "checkedAt": "2026-10-29T07:50:32.268Z",
+      "checkedAt": "2026-10-30T07:54:30.715Z",
       "lastSuccessfulAt": null,
       "inserted": 0,
       "unchanged": 0
@@ -35,7 +35,7 @@
       "name": "Monetary Authority of Singapore",
       "jurisdiction": "SG",
       "status": "empty",
-      "checkedAt": "2026-10-29T07:50:32.761Z",
+      "checkedAt": "2026-10-30T07:54:31.286Z",
       "lastSuccessfulAt": null,
       "inserted": 0,
       "unchanged": 0
@@ -45,7 +45,7 @@
       "name": "IMDA Singapore",
       "jurisdiction": "SG",
       "status": "failed",
-      "checkedAt": "2026-10-29T07:50:32.983Z",
+      "checkedAt": "2026-10-30T07:54:31.377Z",
       "lastSuccessfulAt": null,
       "inserted": 0,
       "unchanged": 0
