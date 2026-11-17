@@ -1,5 +1,293 @@
 [
  {
+  "id": "upd_ing_5dc70a11-3054-45c6-9115-3b48b56531e8",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_1_cap_300_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 1 — 300 (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 1 — 300 (Current version, English). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "027e82a163bc987144ef68e90742114033f7fb64d5c74cbde9e28dad9de0e3cd",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_203364c5-6556-4f2e-ad70-7f3270d391f9",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_301_cap_600_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 301 — 600 (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 301 — 600 (Current version, English). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "2a13b4951b43159210f992224d06515e6fd3f48593638bae704928ee19a9c2b0",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_633aa9a3-fcbb-4aa1-ab77-0e4269f91bf5",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_601_cap_end_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 601 and onwards (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 601 and onwards (Current version, English). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "f2b0c81b5116ef887d53e59ceb0709470a1fef25c143539b57ef3d759e788e43",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_c84f525c-0a6b-489c-9506-9516a5c4de40",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_instruments_en",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Instruments & Others (Current version, English)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Instruments & Others (Current version, English). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, English)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_en.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "3103e4b61699339d4d3186c27827ac5a349bc9f699af34e45658b7d8820cfa0a",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_4ca449de-9a57-4c41-84cd-b4e05187f814",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_1_cap_300_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "b2e4c78b841278e7ceeea7f7b71efbfbec01aaed2059737662a77a5d0e12bba2",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_12270319-704c-4bb6-9f66-073ba40d8808",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_301_cap_600_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "e775acf0d50f5243984b4825bddd4363dd894ea16fd4eec35a56e9caa2e465d5",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_754a79b7-6286-4e2d-82ba-ec878ba3c15d",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_601_cap_end_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "8ff23bed28e349d5d5489e354806bfbae98538fa4884aa52a81dacee166ce3dc",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_6522432c-70ea-4d30-807d-7b8d79bca313",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_instruments_zh-Hant",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_zh-Hant.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "fe8e2f76a528aada7916ba9d480c1d1027aa2af34bcd9906996a1a3859fcce54",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_d9aad2e8-8bfe-4bab-b6dd-8cd2de3d2d5a",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_1_cap_300_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "421c87007fe63f91185d78efbecc18a51d0c0e2f5a1406dceb444cd1f6d8f4ef",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_243b8d3f-dba7-4545-a942-439d74776470",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_301_cap_600_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "a2bcfc750d99bb8e62d39f5ed828dd9edf1b6d38fdb6366472c782280de3dd8c",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_7c21c1b0-9b7e-4a5c-ad68-f741065ae96b",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_leg_cap_601_cap_end_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "48ceb648ca4a87d7871bf02bd3fd5172eea5463268215e4c5c2d6b70868e3ec3",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
+  "id": "upd_ing_d3e50301-0a94-46ce-9dc9-ed2eb77905e1",
+  "externalId": "hk:event:hkel-dataset:2026-11-16-hkel_c_instruments_zh-Hans",
+  "regulationId": null,
+  "jurisdiction": "HK",
+  "eventType": "source_refresh",
+  "title": "Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese)",
+  "summary": "New Hong Kong e-Legislation (DATA.GOV.HK) update detected: Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese). Pending editorial review.",
+  "eventDate": "2026-11-16",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_zh-Hans.zip",
+  "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
+  "sourceCheckedAt": "2026-11-17T09:54:58.129Z",
+  "contentHash": "85f8e4593e56d0863ccc3629ed2cd4adbd154f495d4f874852f5884276551182",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-17T09:54:58.129Z",
+  "updatedAt": "2026-11-17T09:55:01.188Z"
+ },
+ {
   "id": "upd_ing_27e0c33a-3e93-4a1f-a4d8-a31a051a2261",
   "externalId": "hk:event:hkel-dataset:2026-11-02-hkel_c_leg_cap_1_cap_300_en",
   "regulationId": null,
@@ -2641,8 +2929,8 @@
   "contentHash": "cf00dbd72187736dfbc839ccb1e51f547fbf5f32be9d3f8c4e0809a6ee964c77",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_pdpa_2025",
@@ -2672,8 +2960,8 @@
   "contentHash": "4240d447834d58a1f947a9e3133294999df7e68ff04cc3bddd907352f04e2a9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_breach_regs_2024",
@@ -2700,8 +2988,8 @@
   "contentHash": "ab45fe6ac3fa8bdf5b1cbeabbe81801e5ebdf59b7f526ee907d37db3a485a953",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_hkid_guide_2024",
@@ -2729,8 +3017,8 @@
   "contentHash": "04e949c0c97bee7386599e55f9229ffb38f55d5a411b6215ad3c1640634204e4",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_gba_scc_2023",
@@ -2756,8 +3044,8 @@
   "contentHash": "cb60c736262fba1081150b996918a2179230b96803901c3e8dfaae9bdc33a758",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_breach_guide_2023",
@@ -2784,8 +3072,8 @@
   "contentHash": "24aa320d13544429099fba92c2562b1eb53c509ed861a34d5c91e72891a86776",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_penalties_2022",
@@ -2815,8 +3103,8 @@
   "contentHash": "8173f373c6dbc2e9a8dec155c67e428f45172d13c0cf6af7604442fbe290367a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_doxxing_2021",
@@ -2846,8 +3134,8 @@
   "contentHash": "fefed3b02f2f1014eccd14de476f0a57940728e57ddd47e3b81127dbaf9e75ff",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_2020_amendment",
@@ -2877,8 +3165,8 @@
   "contentHash": "ce48c888a358260213b7d9f03d68b724837b700fd2d45b3604f5c48d8d2bf1da",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_breach_regs",
@@ -2905,8 +3193,8 @@
   "contentHash": "11c9fcebdb50191d736758ccb23c10dbd11821f16c271ffcfb0d38bb065ca665",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_mas_trm_2021",
@@ -2935,8 +3223,8 @@
   "contentHash": "555044f582f95df6f13c36b2dfd26974286f072875e3f48da765efb16d3bf8d2",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_sg_core_2014",
@@ -2966,8 +3254,8 @@
   "contentHash": "1db85f94299bd0558313adbcc737126dd7787248477839b649ec52c555d6e174",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_direct_marketing_2013",
@@ -2997,8 +3285,8 @@
   "contentHash": "f44b062ff057966f977bb89bdbe7e1538db7fb3fc58056f448294c66287e1f9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_uemo_2007",
@@ -3027,8 +3315,8 @@
   "contentHash": "d994ed1d6ef83fefec9da0e0f8bbb7dd048501c966c5a352a0ae3ef4fe4ea11a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_tmg1_issue_2003",
@@ -3057,8 +3345,8 @@
   "contentHash": "8d707fa48f3a18024929ee9634a1e5eb28b818ca47f3224c700f2df6d9405295",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  },
  {
   "id": "upd_hk_pdpo_commencement",
@@ -3088,7 +3376,7 @@
   "contentHash": "3d5861e2efbbd3480916f4e37e0d13f7698aedad7ea254f11558732f7c6fcfab",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-16T08:48:14.059Z",
-  "updatedAt": "2026-11-16T08:48:17.323Z"
+  "createdAt": "2026-11-17T09:54:58.126Z",
+  "updatedAt": "2026-11-17T09:55:01.278Z"
  }
 ]
