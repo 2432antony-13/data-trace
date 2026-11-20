@@ -1,5 +1,77 @@
 [
  {
+  "id": "upd_ing_bf48b876-803f-40f9-a27f-fdb083f2b359",
+  "externalId": "sg:event:imda-codes:2026-11-20-codes-of-practice-and-guidelines---infocomm",
+  "regulationId": null,
+  "jurisdiction": "SG",
+  "eventType": "source_refresh",
+  "title": "Codes of Practice and Guidelines - Infocomm",
+  "summary": "New IMDA Singapore update detected: Codes of Practice and Guidelines - Infocomm. Pending editorial review.",
+  "eventDate": "2026-11-20",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Codes of Practice and Guidelines - Infocomm（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://www.imda.gov.sg/regulations-and-licences/regulations/codes-of-practice/codes-of-practice-and-guidelines---infocomm",
+  "sourceName": "IMDA Singapore",
+  "sourceCheckedAt": "2026-11-20T09:28:01.571Z",
+  "contentHash": "e2b2ac022174f998c055e0b14794d4990d74f6044d39bccf667fadcc61e22446",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-20T09:28:01.571Z",
+  "updatedAt": "2026-11-20T09:28:07.911Z"
+ },
+ {
+  "id": "upd_ing_b311f6fa-0a55-4b1b-a744-97fb6a3a2f72",
+  "externalId": "sg:event:imda-codes:2026-11-20-codes-of-practice-and-guidelines---media",
+  "regulationId": null,
+  "jurisdiction": "SG",
+  "eventType": "source_refresh",
+  "title": "Codes of Practice - Media",
+  "summary": "New IMDA Singapore update detected: Codes of Practice - Media. Pending editorial review.",
+  "eventDate": "2026-11-20",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Codes of Practice - Media（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://www.imda.gov.sg/regulations-and-licences/regulations/codes-of-practice/codes-of-practice-and-guidelines---media",
+  "sourceName": "IMDA Singapore",
+  "sourceCheckedAt": "2026-11-20T09:28:01.571Z",
+  "contentHash": "7f92a10d6b33926d6844ac19a60b8bec865d43d95f707833baf7a04d9621207c",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-20T09:28:01.571Z",
+  "updatedAt": "2026-11-20T09:28:07.911Z"
+ },
+ {
+  "id": "upd_ing_3256964d-bfc5-4725-9f06-3b93e7613c82",
+  "externalId": "sg:event:imda-codes:2026-11-20-codes-of-practice-and-guidelines---postal",
+  "regulationId": null,
+  "jurisdiction": "SG",
+  "eventType": "source_refresh",
+  "title": "Codes of Practice and Guidelines - Postal",
+  "summary": "New IMDA Singapore update detected: Codes of Practice and Guidelines - Postal. Pending editorial review.",
+  "eventDate": "2026-11-20",
+  "importance": "medium",
+  "industries": [
+   "cross_industry"
+  ],
+  "topics": [],
+  "summaryZh": "【自动收录】Codes of Practice and Guidelines - Postal（机器采集自官方源，人工精校待补）",
+  "sourceUrl": "https://www.imda.gov.sg/regulations-and-licences/regulations/codes-of-practice/codes-of-practice-and-guidelines---postal",
+  "sourceName": "IMDA Singapore",
+  "sourceCheckedAt": "2026-11-20T09:28:01.571Z",
+  "contentHash": "0ff4313514bb64143a25167bfe3497e4bfd0fc89aa19aa62f66524835110d576",
+  "previousVersionExternalId": null,
+  "status": "published",
+  "createdAt": "2026-11-20T09:28:01.571Z",
+  "updatedAt": "2026-11-20T09:28:07.911Z"
+ },
+ {
   "id": "upd_ing_18401718-5d3f-43d3-a2b9-d952467d5d67",
   "externalId": "sg:event:imda-codes:2026-11-19-codes-of-practice-and-guidelines---infocomm",
   "regulationId": null,
@@ -3001,8 +3073,8 @@
   "contentHash": "cf00dbd72187736dfbc839ccb1e51f547fbf5f32be9d3f8c4e0809a6ee964c77",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_pdpa_2025",
@@ -3032,8 +3104,8 @@
   "contentHash": "4240d447834d58a1f947a9e3133294999df7e68ff04cc3bddd907352f04e2a9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_breach_regs_2024",
@@ -3060,8 +3132,8 @@
   "contentHash": "ab45fe6ac3fa8bdf5b1cbeabbe81801e5ebdf59b7f526ee907d37db3a485a953",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_hkid_guide_2024",
@@ -3089,8 +3161,8 @@
   "contentHash": "04e949c0c97bee7386599e55f9229ffb38f55d5a411b6215ad3c1640634204e4",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_gba_scc_2023",
@@ -3116,8 +3188,8 @@
   "contentHash": "cb60c736262fba1081150b996918a2179230b96803901c3e8dfaae9bdc33a758",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_breach_guide_2023",
@@ -3144,8 +3216,8 @@
   "contentHash": "24aa320d13544429099fba92c2562b1eb53c509ed861a34d5c91e72891a86776",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_penalties_2022",
@@ -3175,8 +3247,8 @@
   "contentHash": "8173f373c6dbc2e9a8dec155c67e428f45172d13c0cf6af7604442fbe290367a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_doxxing_2021",
@@ -3206,8 +3278,8 @@
   "contentHash": "fefed3b02f2f1014eccd14de476f0a57940728e57ddd47e3b81127dbaf9e75ff",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_2020_amendment",
@@ -3237,8 +3309,8 @@
   "contentHash": "ce48c888a358260213b7d9f03d68b724837b700fd2d45b3604f5c48d8d2bf1da",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_breach_regs",
@@ -3265,8 +3337,8 @@
   "contentHash": "11c9fcebdb50191d736758ccb23c10dbd11821f16c271ffcfb0d38bb065ca665",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_mas_trm_2021",
@@ -3295,8 +3367,8 @@
   "contentHash": "555044f582f95df6f13c36b2dfd26974286f072875e3f48da765efb16d3bf8d2",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_sg_core_2014",
@@ -3326,8 +3398,8 @@
   "contentHash": "1db85f94299bd0558313adbcc737126dd7787248477839b649ec52c555d6e174",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_direct_marketing_2013",
@@ -3357,8 +3429,8 @@
   "contentHash": "f44b062ff057966f977bb89bdbe7e1538db7fb3fc58056f448294c66287e1f9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_uemo_2007",
@@ -3387,8 +3459,8 @@
   "contentHash": "d994ed1d6ef83fefec9da0e0f8bbb7dd048501c966c5a352a0ae3ef4fe4ea11a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_tmg1_issue_2003",
@@ -3417,8 +3489,8 @@
   "contentHash": "8d707fa48f3a18024929ee9634a1e5eb28b818ca47f3224c700f2df6d9405295",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  },
  {
   "id": "upd_hk_pdpo_commencement",
@@ -3448,7 +3520,7 @@
   "contentHash": "3d5861e2efbbd3480916f4e37e0d13f7698aedad7ea254f11558732f7c6fcfab",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-19T09:40:30.018Z",
-  "updatedAt": "2026-11-19T09:40:34.880Z"
+  "createdAt": "2026-11-20T09:28:01.567Z",
+  "updatedAt": "2026-11-20T09:28:07.971Z"
  }
 ]
