@@ -1,6 +1,6 @@
 [
  {
-  "id": "upd_ing_67366db8-5b28-4a16-9116-5d6536233384",
+  "id": "upd_ing_232feed2-1024-40d4-867f-3fc59777f9aa",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_1_cap_300_en",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -16,15 +16,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, English)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_en.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "6c60f2e840d3982395ad50fff828e10969836705b6b3aa072555f59f94467928",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_8a85e65f-479e-45e5-ab5f-d1b2a75e3819",
+  "id": "upd_ing_d43459ca-817f-4a17-891c-a88b80f447b5",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_301_cap_600_en",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -40,15 +40,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, English)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_en.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "fdffcb3f66686b844e96cfb814d34c3b82ab873aebc2f4b1328f7257c47b89db",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_09c935a4-cb8c-489c-9704-157396a2af50",
+  "id": "upd_ing_53c940cf-93d7-47df-bbc6-a690186792e1",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_601_cap_end_en",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -64,15 +64,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, English)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_en.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "869d145247e0809a9740b9f030c836a86195196bb7118cd4c55b86e5a18396d6",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_4a4a4f5c-6c88-4918-86dc-9fe1341c534d",
+  "id": "upd_ing_402fc77a-a15c-4570-88cb-e0a295aebc77",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_instruments_en",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -88,15 +88,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, English)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_en.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "10cb6beab5af461f994c9443228b397c91997a785660c2c46af8a49f47490a7f",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_8fdc0955-d75a-492f-9dae-7da17554c719",
+  "id": "upd_ing_dfec0e67-34a1-4c56-991e-d8c87808fcc0",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_1_cap_300_zh-Hant",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -112,15 +112,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_zh-Hant.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "ef03a6838e5381e9498e978e079821245fc3fae7508d92659006e60b743482d6",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_8ceece83-7b61-486d-8e47-22fe102d8e09",
+  "id": "upd_ing_9fd1de0f-80fb-4aaa-9267-8580ca4237a7",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_301_cap_600_zh-Hant",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -136,15 +136,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_zh-Hant.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "1a6298f8fe956a873eb5c1238b8288decac7e31231a08d7c9bfee45682e96f09",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_fe0882f4-bd51-4eb0-843b-fc97cb2428f4",
+  "id": "upd_ing_3e5b341d-f4f6-43f0-b714-1b6b87179728",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_601_cap_end_zh-Hant",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -160,15 +160,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_zh-Hant.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "3525bd09e3f3aaa85b64a52d639e9c92c4eac7a9a013f4f78e43327c587990d4",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_57d263d2-8a67-45b6-8387-04a92ac870d6",
+  "id": "upd_ing_dc2af8b6-fede-41ca-9943-e470a115a260",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_instruments_zh-Hant",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -184,15 +184,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, Traditional Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_zh-Hant.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "533f05d87f1c4915fdef60dc787caade024f5fba0a8efd17fd4b44edbb7950e8",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_97786908-563e-4dcf-a61e-d5ecee666739",
+  "id": "upd_ing_61548be4-ab46-4238-9ef6-723ad01bcbd6",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_1_cap_300_zh-Hans",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -208,15 +208,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 1 — 300 (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_1_cap_300_zh-Hans.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "6199a84aaa4fa5e5758cf79dbc1a729bc53393803ff39ca56ccb7d45bb490422",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_e74f1ab0-06c5-4b9e-8207-4a3bba5d985a",
+  "id": "upd_ing_cf03c5d0-b419-482f-8e8b-c3f06ccacaf6",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_301_cap_600_zh-Hans",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -232,15 +232,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 301 — 600 (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_301_cap_600_zh-Hans.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "e23ee1a0d79c1434fe6c066ae7c7104d8db82133624db744df693e759e9079fc",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_2014ecef-42a8-4ab0-9f8d-2cdc5abd2044",
+  "id": "upd_ing_4277fddf-d04c-488c-bf20-be3030dcf988",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_leg_cap_601_cap_end_zh-Hans",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -256,15 +256,15 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Caps. 601 and onwards (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_leg_cap_601_cap_end_zh-Hans.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "9e255e8ae81c5628c850e271998a25e64dd23cb7bb8aef1aa4e000278656ebbf",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
-  "id": "upd_ing_eba295e0-b616-4af7-8ffa-7609575b0818",
+  "id": "upd_ing_85b030ee-af75-4a9d-961d-253585a5ae10",
   "externalId": "hk:event:hkel-dataset:2026-11-24-hkel_c_instruments_zh-Hans",
   "regulationId": null,
   "jurisdiction": "HK",
@@ -280,12 +280,12 @@
   "summaryZh": "【自动收录】Hong Kong Legislation: Instruments & Others (Current version, Simplified Chinese)（机器采集自官方源，人工精校待补）",
   "sourceUrl": "https://resource.data.one.gov.hk/doj/data/hkel_c_instruments_zh-Hans.zip",
   "sourceName": "Hong Kong e-Legislation (DATA.GOV.HK)",
-  "sourceCheckedAt": "2026-11-27T10:19:42.134Z",
+  "sourceCheckedAt": "2026-11-28T09:37:47.284Z",
   "contentHash": "c5706554469010c8d82e9b91d55ee5829062c875094aba9a3527e43c3cb843fb",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.134Z",
-  "updatedAt": "2026-11-27T10:19:45.093Z"
+  "createdAt": "2026-11-28T09:37:47.284Z",
+  "updatedAt": "2026-11-28T09:37:52.288Z"
  },
  {
   "id": "upd_ing_1cc906b3-35a4-41e5-bb52-19e6f7f90944",
@@ -3433,8 +3433,8 @@
   "contentHash": "cf00dbd72187736dfbc839ccb1e51f547fbf5f32be9d3f8c4e0809a6ee964c77",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_pdpa_2025",
@@ -3464,8 +3464,8 @@
   "contentHash": "4240d447834d58a1f947a9e3133294999df7e68ff04cc3bddd907352f04e2a9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_breach_regs_2024",
@@ -3492,8 +3492,8 @@
   "contentHash": "ab45fe6ac3fa8bdf5b1cbeabbe81801e5ebdf59b7f526ee907d37db3a485a953",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_hkid_guide_2024",
@@ -3521,8 +3521,8 @@
   "contentHash": "04e949c0c97bee7386599e55f9229ffb38f55d5a411b6215ad3c1640634204e4",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_gba_scc_2023",
@@ -3548,8 +3548,8 @@
   "contentHash": "cb60c736262fba1081150b996918a2179230b96803901c3e8dfaae9bdc33a758",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_breach_guide_2023",
@@ -3576,8 +3576,8 @@
   "contentHash": "24aa320d13544429099fba92c2562b1eb53c509ed861a34d5c91e72891a86776",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_penalties_2022",
@@ -3607,8 +3607,8 @@
   "contentHash": "8173f373c6dbc2e9a8dec155c67e428f45172d13c0cf6af7604442fbe290367a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_doxxing_2021",
@@ -3638,8 +3638,8 @@
   "contentHash": "fefed3b02f2f1014eccd14de476f0a57940728e57ddd47e3b81127dbaf9e75ff",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_2020_amendment",
@@ -3669,8 +3669,8 @@
   "contentHash": "ce48c888a358260213b7d9f03d68b724837b700fd2d45b3604f5c48d8d2bf1da",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_breach_regs",
@@ -3697,8 +3697,8 @@
   "contentHash": "11c9fcebdb50191d736758ccb23c10dbd11821f16c271ffcfb0d38bb065ca665",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_mas_trm_2021",
@@ -3727,8 +3727,8 @@
   "contentHash": "555044f582f95df6f13c36b2dfd26974286f072875e3f48da765efb16d3bf8d2",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_sg_core_2014",
@@ -3758,8 +3758,8 @@
   "contentHash": "1db85f94299bd0558313adbcc737126dd7787248477839b649ec52c555d6e174",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_direct_marketing_2013",
@@ -3789,8 +3789,8 @@
   "contentHash": "f44b062ff057966f977bb89bdbe7e1538db7fb3fc58056f448294c66287e1f9e",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_uemo_2007",
@@ -3819,8 +3819,8 @@
   "contentHash": "d994ed1d6ef83fefec9da0e0f8bbb7dd048501c966c5a352a0ae3ef4fe4ea11a",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_tmg1_issue_2003",
@@ -3849,8 +3849,8 @@
   "contentHash": "8d707fa48f3a18024929ee9634a1e5eb28b818ca47f3224c700f2df6d9405295",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  },
  {
   "id": "upd_hk_pdpo_commencement",
@@ -3880,7 +3880,7 @@
   "contentHash": "3d5861e2efbbd3480916f4e37e0d13f7698aedad7ea254f11558732f7c6fcfab",
   "previousVersionExternalId": null,
   "status": "published",
-  "createdAt": "2026-11-27T10:19:42.132Z",
-  "updatedAt": "2026-11-27T10:19:45.147Z"
+  "createdAt": "2026-11-28T09:37:47.281Z",
+  "updatedAt": "2026-11-28T09:37:52.341Z"
  }
 ]
